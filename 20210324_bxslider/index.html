@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>bxslider</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+         /* documnet 이미 선언 되어 있어 "documnet" 라고 할 필요 없음
+            이벤트는 실행하기 위한 함수 필요 = function 
+             $(".slider").bxSlider({옵션});*/
+        $(document).ready(function(){
+            $(".slider").bxSlider({
+                auto:true,
+                mode:'vertical'
+            }); 
+            $(".slider1").bxSlider();
+            
+        });
+    </script>
+    <style>
+        .container {width: 1000px;
+                    margin: 0 auto;}
+        .slider img {width: 100%;}
+        .bx-wrapper {-moz-box-shadow: 0 none;
+                     -webkit-box-shadow: 0 0 5px #ccc;
+                     box-shadow: none;
+                     border: 0 none;
+                     background: #fff;
+                     margin-bottom: 0;}
+        .bx-wrapper .bx-pager {bottom: 30px;}
+    </style>
+</head>
+<body>
+   <div class="container">
+        <ul class="slider">
+            <li><img src="images/pc01.jpg" alt=""></li>
+            <li><img src="images/pc02.jpg" alt=""></li>
+            <li><img src="images/pc03.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul class="slider1">
+            <li><img src="images/img01.jpg" alt=""></li>
+            <li><img src="images/img02.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

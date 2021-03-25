@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/* header */
+body {min-width: 980px;}
+.utilwrap {border-bottom: 1px solid #ccc;}
+.util {width:980px;
+       margin:0 auto;}
+.umenu {.width: 330px; 
+        float:right;}
+.umenu li {float: left;
+           padding:0 10px;
+           position: relative;}
+.umenu li:last-child{padding-right: 0;}
+.umenu li a {display: block;
+            line-height: 35px;
+            font-size:12px;}
+.umenu li:after {content:"";
+                position: absolute;
+                width:1px;
+                height:10px;
+                background:#CCC;;
+                right: 0;
+                top:12px;}
+.umenu li:last-child:after{content:"";
+                           display:none;}
+#header h1 {text-align: center;}
+.gnbwrap {background:#1d5da4;}
+.gnbmenu {width:980px;
+          margin: 0 auto;}
+.gnbmenu li {float:left;
+             width: calc(100% / 6);
+             border-left: 1px solid #a2c0e0;}
+.gnbmenu li:last-child{border-right: 1px solid #a2c0e0;}
+.gnbmenu li a {display: block;
+               line-height: 40px;
+               text-align: center;
+               color:white;}
+.gnbmenu li a:hover{color:orange; background:blue;}
+
+/* visual wrap */
+.visualwrap {height: 400px;
+             /* background-color: #223a6a;
+             background-image: url(../images/main_bg01.jpg);
+             background-position: center;
+             background-repeat: no-repeat; */
+             background: #223a6a url(../images/main_bg01.jpg)
+             no-repeat center;
+             overflow: hidden}
+            /* vimg2 이미지 크기가 영역을 벗어남 
+            overflow: hidden 할 경우 영역에 맞게 잘라냄 */
+.visual {width:980px;
+         height: 400px;
+         margin: 0 auto;
+         position: relative;}
+.visual .vimg1, 
+.visual .vimg2 {position: absolute;}
+.visual .vimg1 {right: 0;top: -10px;}
+.visual .vimg2 {left: 0;top: 76px;}
+
+/* section */
+.section {background-color: #eee;}
+.banner {width:980px;
+        margin:0 auto;}
+.banner li {float:left;
+            width: calc(100% / 5);
+            padding-top:10px;}
+.banner li a {display: block;
+              height: 196px;
+              text-align: center;
+              color:white;}
+.banner li:nth-child(1){background: #7c99b9;}
+.banner li:nth-child(2){background: #4f74a1;}
+.banner li:nth-child(3){background: #4b8ce0;}
+.banner li:nth-child(4){background: #3db5f3;}
+.banner li:nth-child(5){background: #95c8ff;}
+
+/* contwrap 1st */
+.contwrap1st {width:980px;
+             margin:0 auto;}
+.contwrap1st li {float:left;
+                 width:310px;
+                 margin-right: 25px;}
+.contwrap1st li:last-child {margin-right: 0;}
+.contwrap1st li .body {padding: 10px 20px 10px 20px;
+                       border: 1px solid #ccc;
+                       border-top: 0 none;}
+.contwrap1st img {display: block;}
+
+/* contWrap 2st  */
+.contWrap2st {width: 980px;
+              margin: 0 auto;}
+.contWrap2st li {float: left;
+                 width: 310px;
+                 margin-right: 25px;
+                 border: 1px solid #ccc;
+                 padding: 20px;
+                 position: relative;
+                 overflow: hidden;}
+.contWrap2st li:last-child {margin-right: 0;}
+.contWrap2st img{position: absolute;
+                 right: -50px;}
+.contWrap2st .body {width:150px;} 
+.contWrap2st .body a {color:#4b8ce0;
+                      font-size: 14px;}
+
+/* footer */
+#footer {background: #eee;}
+.footerTopWrap {background: #ccc;}
+.footerTop {width: 980px;
+            margin: 0 auto;}
+.footerTop ul {float: left;
+              overflow: hidden}
+.footerTop li {float:left;
+               position: relative;}
+.footerTop li a {display: block;
+                 padding: 0 20px;
+                 line-height: 40px;}
+.footerTop li:first-child a {padding-left:0;}
+.footerTop li:after {content:"";
+                     position: absolute;
+                     width: 1px;
+                     height: 10px;
+                     background: #000;
+                     right:-1px;
+                     top: 15px;}
+.footerBottom {width: 980px;
+               margin: 0 auto;
+               padding: 20px 0;}
+.footerBottom h3 {float: left;
+                  margin-right: 20px;}
+.footerBottom .copy {float: left;}
+
+
+/* common */
+.mb5 {margin-bottom: 5px !important;}
+.mb10 {margin-bottom: 10px !important;}
+.mb15 {margin-bottom: 15px !important;}
+.mb20 {margin-bottom: 20px !important;}
+.mb30 {margin-bottom: 30px !important;}
