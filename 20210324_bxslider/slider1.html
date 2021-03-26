@@ -61,7 +61,11 @@
         .prevBtn {left:0;}
         
         #section1st li {float:left;
-                     width:calc((1000px - 60px) / 4 )}
+                        width:calc((1000px - 60px) / 4 );
+                        height: 235px;
+                        position: relative;
+                        cursor: pointer;
+                        overflow: hidden;}
         #section1st li + li {margin-left: 20px;}
        /* #section li {margin-left: 20px;}
         #section li:first-child {margin-left: 0;} 
@@ -78,7 +82,20 @@
                            background: #000;
                            margin: 10px auto;}
         #section1st p {margin-bottom: 20px;}
-        
+        #section1st .overlay {background: skyblue;
+                              height: 100%;
+                              width: 100%;
+                              position: absolute;
+                              .top:0;
+                              top:100%;
+                              opacity:1;
+                              transition: 0.3s;
+                              text-align: center;
+                              line-height: 235px;}        
+        /* opacity는 0~1까지의 숫자 사용 / 글자까지 투명해진다. */
+        #section1st li:hover .overlay {opacity: 0.5; top:0}
+        /* #section1st li:hover .overlay {opacity: 1;}
+        로 적용할 경우 이미지는 보이지 않고, 네모박스만 보인다 */
         #section2st li {float:left;
                      width:calc((1000px - 60px) / 4 )}
         #section2st li + li {margin-left: 20px;}
@@ -139,38 +156,25 @@
          <ul class="clearfix">
              <li>
                  <img src="../images/testimg.jpg" alt="">
+                 <div class="overlay">TOP</div>
              </li>
+   
              <li>
                  <img src="../images/testimg.jpg" alt="">
+                 <div class="overlay">TOP</div>
              </li>
+   
              <li>
                  <img src="../images/testimg.jpg" alt="">
+                 <div class="overlay">TOP</div>
              </li>
+   
              <li>
                  <img src="../images/testimg.jpg" alt="">
-             </li>
+                 <div class="overlay">TOP</div>
+             </li>   
          </ul>
      </section>     
      </div>
-     <div class="pt30 pb30">         
-    <section class="container mb30" id="section2st">
-           <h2>GALLERY</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, fuga?</p>
-            <ul class="clearfix">
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            </ul>
-    </section>
-    </div>
 </body>
 </html>
