@@ -8,6 +8,13 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+         $(document).ready(function(){
+            $(".slider").bxSlider({
+                pagerCustom:".sliderWrap",
+            });
+        });
+    </script>
 </head>
 <body>
     <header class="header"> <!-- 100% -->
@@ -19,39 +26,82 @@
                   <li><a href="#">대학원</a></li>    
                 </ul>
                 <ul class="right ">
-                   <li><a href="#">글자크기</a></li>
+                   <li><a href="#">글자크기</a>
+                   <img src="images/box.jpg" alt="">
+                   <img src="images/box.jpg" alt="">
+                   </li>
                    <li><a href="#">찾아오시는길</a></li>
                    <li><a href="#">ENGLISH</a></li>
                    <li><a href="#">사이트맵</a></li>
                 </ul>
             </div>                 
        </div>  
-   
+       <div class="nav"> <!-- 100% -->
+           <div class="logo"> <!-- 1200px -->
+              <img src="images/logo.png" alt="로고">
+              <h1>한국대학교</h1>
+              <p>HANGUK UNIVERSITY</p>               
+           </div>
+           <div class="navRight">
+               <ul>
+                   <li>대학소개</li>
+                   <li>학과소개</li>
+                   <li>학사안내</li>
+                   <li>대학생활</li>
+                   <li>학생지원센터</li>
+               </ul>
+           </div>
+       </div>
    
     <div id="contents"> <!-- 100% -->
         <section class="titleWrap"> <!-- 1200px center -->
-            
+           <div class="titleL">
+            <p>함께 나누며 세상을 이끌어</p>
+            <p>세계로 향하는 한국대학교</p>
+           </div>
+           <div class="titleR clearfix">
+               <ul>
+                   <li>
+                   <img src="images/titleWrap1.png" alt="">
+                   <p>입학절차안내</p>
+                   </li>
+                   <li>
+                   <img src="images/titleWrap2.png" alt="">
+                   <p>입학설명회</p>
+                   </li>
+                   <li>
+                   <img src="images/titleWrap3.png" alt="">
+                   <p>장학제도</p>
+                   </li>
+                   <li>
+                   <img src="images/titleWrap4.png" alt="">
+                   <p>증명서발급</p>
+                   </li>
+               </ul>
+           </div>
+
         </section>
         
         <div class="container">
             <ul class="clearfix">
                <!-- 전체 25% 넣고 ntn-child(1) / ntn-child(8) 75% -->
-                <li>01
+                <li>
                 <div class="sliderWrap">
                     <ul class="slider">
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
+                        <li><img src="images/slider01.jpg" alt=""></li>
+                        <li><img src="images/slider01.jpg" alt=""></li>
+                        <li><img src="images/slider01.jpg" alt=""></li>
+                        <li><img src="images/slider01.jpg" alt=""></li>
                     </ul>
                 </div>
-                </li> 
-                <li>02</li> 
+                </li>   
+                <li><img src="images/container2.jpg" alt=""></li> 
                 <li>03</li>
                 <li>04</li>
                 <li>05</li>
-                <li>06</li>
+                <li><img src="images/container6.jpg" alt=""></li>
                 <li>07</li>
-                <li>08</li>
+                <li><img src="images/container8.jpg" alt=""></li>
             </ul>
         </div>
     </div>

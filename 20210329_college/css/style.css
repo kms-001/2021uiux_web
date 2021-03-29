@@ -12,12 +12,17 @@
 .menu .left li {float: left;
                 width: 120px;
                 padding: 12px 0;
-                text-align: center;}
+                text-align: center;
+                margin-left:2px;}
 .menu .left li:nth-child(1) {background: #fff;}
 .menu .left li:nth-child(2) {background: #00163b;}
 .menu .left li:nth-child(3) {background: #00163b;}
-.menu .right li {display: inline;}
 
+.menu .right li {display: inline;}
+.menu .right li a {color:#fff;}
+
+.nav {width: 100%;
+      height: 120px;}
 
 /*contents*/
 #contents {height: 1300px;
@@ -29,9 +34,21 @@
           padding: 100px 0;}
 #contents .titleWrap {width: 1200px;
                       height: 260px;
-                      background: violet;
+                      .background: violet;
                       margin: 0 auto;
                       margin-bottom: 50px;}
+
+.titleL {float:left;
+         margin-top: 60px;}
+.titleR li {float:right;
+            margin-left: 20px;
+            margin-top: 60px;}
+.titleR li p {color:#fff;}
+.titleL p {color:#fff;
+           font-size: 40px;}
+.titleL p:nth-child(2){font-size:50px;
+                       font-weight: 600; }
+
 #contents .container {width: 1200px;
                       margin: 0 auto;
                       background: #fff;}
@@ -45,9 +62,13 @@
                                         height: 450px;
                                         background: gray;}
 #contents .container>ul>li:nth-child(2){height: 450px;}
-#contents .container>ul>li:nth-child(3){}
-#contents .container>ul>li:nth-child(4){}
-#contents .container>ul>li:nth-child(5){}
+#contents .container>ul>li:nth-child(3){background: #00163b;}
+#contents .container>ul>li:nth-child(4){background: #1651b7;}
+#contents .container>ul>li:nth-child(5){background: #fff;}
 #contents .container>ul>li:nth-child(6){background: red;}
 #contents .container>ul>li:nth-child(7){}
 #contents .container>ul>li:nth-child(8){width: 75%;}
+
+
+.bx-wrapper {box-shadow: none;
+             border: none;}
