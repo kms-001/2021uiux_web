@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+.header {width: 100%;}
+.utilWrap {width: 100%;
+           background: #0044af;}
+.menu {width: 1200px;
+       margin: 0 auto;
+       position: relative;}
+.right {position: absolute;
+        right: -10px;
+        top:10px;}
+.menu .left li {float: left;
+                width: 120px;
+                padding: 12px 0;
+                text-align: center;}
+.menu .left li:nth-child(1) {background: #fff;}
+.menu .left li:nth-child(2) {background: #00163b;}
+.menu .left li:nth-child(3) {background: #00163b;}
+.menu .right li {display: inline;}
+
+
+/*contents*/
+#contents {height: 1300px;
+          background-image: url(../images/bg_dot.gif),
+          url(../images/main_bg.jpg);
+          background-repeat: repeat, no-repeat;
+          background-position: center;
+          background-size: auto,cover;
+          padding: 100px 0;}
+#contents .titleWrap {width: 1200px;
+                      height: 260px;
+                      background: violet;
+                      margin: 0 auto;
+                      margin-bottom: 50px;}
+#contents .container {width: 1200px;
+                      margin: 0 auto;
+                      background: #fff;}
+#contents .container>ul>li
+/* 나중에 ul li를 사용할 수 있어서 > */ 
+                          {float:left;
+                           width: 25%;
+                           height: 225px;}
+#contents .container>ul>li:nth-child(2n){background: pink;}
+#contents .container>ul>li:nth-child(1){width: 75%;
+                                        height: 450px;
+                                        background: gray;}
+#contents .container>ul>li:nth-child(2){height: 450px;}
+#contents .container>ul>li:nth-child(3){}
+#contents .container>ul>li:nth-child(4){}
+#contents .container>ul>li:nth-child(5){}
+#contents .container>ul>li:nth-child(6){background: red;}
+#contents .container>ul>li:nth-child(7){}
+#contents .container>ul>li:nth-child(8){width: 75%;}
