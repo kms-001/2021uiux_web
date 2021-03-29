@@ -18,7 +18,7 @@ body {min-width: 980px;}
                 position: absolute;
                 width:1px;
                 height:10px;
-                background:#CCC;;
+                background:#CCC;
                 right: 0;
                 top:12px;}
 .umenu li:last-child:after{content:"";

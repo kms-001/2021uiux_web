@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var mySlider = $(".slider").bxSlider({
+                auto:true
+            });
+            
+        });
+    </script>
+    <style>
+        .container {width: 1000px;
+                    margin: 0 auto;
+                    position: relative;}
+        .container li img {width:100%;
+                          display:block;}
+
+        
+        /* 이미지 테두리 */
+
+        .bx-wrapper
+        {-moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        background: #fff;}
+        
+        /* 점3개 */
+        .bx-wrapper .bx-pager.bx-default-pager a 
+        {background: #dedddd;
+        text-indent: -9999px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 45px 5px;
+        outline: 0;
+        border-radius: 5px;}
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="slider">
+            <li><img src="images/pc01.jpg" alt=""></li>
+            <li><img src="images/pc02.jpg" alt=""></li>
+            <li><img src="images/pc03.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
