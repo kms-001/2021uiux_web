@@ -2,183 +2,121 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>bxslider</title>
+    <title>slider tab</title>
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
-    <!-- jquery-3.1.1.min.js 와 jquery.bxslider.js 위치가 바뀌면 안됨 -->
-    <!--        기본적인 슬라이드 형식 script 
-                            $(document).ready(function(){
-                    $(".slider").bxSlider();
-                });                                             -->
     <script>
+//        기본 슬라이드
+//        $(document).ready(function(){
+//            $(".slider").bxSlider();
+//        });
+        
         $(document).ready(function(){
-            var mySlider = $(".slider").bxSlider({
-                auto:true,
-                pager:false,
-                controls:false
+            $(".slider").bxSlider({
+                controls:false, // 슬라이더 <> 빼기
+              //pager:false  슬라이더 ... 빼기
+                pagerCustom:".sliderTab",
+              // auto:true 슬라이더 자동으로 움직이게
+             // mode:"vertical" 슬라이드 아래서 위로 
             });
-            $(".nextBtn").click(function(){
-                mySlider.goToNextSlide();
-            });
-            $(".prevBtn").click(function(){
-                mySlider.goToPrevSlide();
-            });
-            
         });
     </script>
     <style>
-        .container {width: 1000px;
-                    margin: 0 auto;
-                    position: relative;}
-        .container li img{width: 100%;
-                          display: block;}
-        #header {background: skyblue;}
-        #header .container li {float:left;
-                               width:calc(1000px / 6);}
-        #header .container li:hover {background: #78c9c9;}
-        #header .container li:hover a {color: #fff;}
-        #header .container li a {display: block;
-                                line-height: 40px;
-                                text-align: center;
-                                font-weight: bold;}
-        
+        .wrap{width: 1000px;
+              margin: 0 auto;
+              position: relative;} /* 2 */
+        .wrap .slider li img {width: 100%;}        
         .bx-wrapper {-moz-box-shadow: none;
                     -webkit-box-shadow: none;
                     box-shadow: none;
-                    border: none;
-                    background: #fff;
+                    border: 0 none;
                     margin-bottom: 0;}
         .bx-wrapper .bx-pager {bottom: 30px;}
-        .bx-wrapper .bx-pager.bx-default-pager a.active {background: red;}
-        /* 클릭했을 때 버튼 빨간색 */
-        .nextBtn, .prevBtn {position: absolute; 
-                            top:50%;
-                            transform:translateY(-50%);
-                            cursor: pointer;}
-        .nextBtn {right:0;}
-        .prevBtn {left:0;}
-        
-        #section1st li {float:left;
-                        width:calc((1000px - 60px) / 4 );
-                        height: 235px;
-                        position: relative;
-                        cursor: pointer;
-                        overflow: hidden;
-                        border-radius: 0 10%;}
-        #section1st li + li {margin-left: 20px;}
-       /* #section li {margin-left: 20px;}
-        #section li:first-child {margin-left: 0;} 
-        
-        #section li {margin-right: 20px;}
-        #section li:last-child {margin-right: 0;}*/
-        #section1st h2, 
-        #section1st p {text-align: center;}
-
-        #section1st h2:after {content: "";
+        .txtWrap {.background: skyblue;
+                  position: absolute;
+                  width: 400px;
+                  top:100px;
+                  right:50px;}
+        /* after : 자식 요소 맨 마지막 */
+        /* margin: 10px 0 (10px 위아래 / 0 좌우)*/
+        .txtWrap h2:after {content: "";
                            display: block;
-                           width: 100px;
+                           width: 50%;
                            height: 1px;
                            background: #000;
-                           margin: 10px auto;}
-        #section1st p {margin-bottom: 20px;}
-        #section1st .overlay {background: rgba(100, 133, 208, 0.9);
-                              height: 100%;
-                              width: 100%;
-                              position: absolute;                             
-                              transition: 0.3s;
-                              display: flex;
-                              justify-content: center;
-                              align-items: center;
-                              .top:0;
-                              .top:-100%; /* 위에서 아래로 */
-                              left:0;
-                              .left:100%;  /* 오른쪽에서 왼쪽 */
-                              .left:-100%  /* 왼쪽에서 오른쪽 */ }  
-        /* opacity는 0~1까지의 숫자 사용 / 글자까지 투명해진다. */
-        #section1st li:hover .overlay {top:0; left:0;}
-        /* #section1st li:hover .overlay {opacity: 1;}
-        로 적용할 경우 이미지는 보이지 않고, 네모박스만 보인다 */
-        #section2st li {float:left;
-                     width:calc((1000px - 60px) / 4 )}
-        #section2st li + li {margin-left: 20px;}
-       /* #section li {margin-left: 20px;}
-        #section li:first-child {margin-left: 0;} 
-        
-        #section li {margin-right: 20px;}
-        #section li:last-child {margin-right: 0;}*/
-        #section2st h2, 
-        #section2st p {text-align: center;}
-
-        #section2st h2:after {content: "";
-                           display: block;
-                           width: 100px;
-                           height: 1px;
-                           background: #000;
-                           margin: 10px auto;}
-        #section2st p {margin-bottom: 20px;}
-        
-        .mb30 {margin-bottom: 30px !important;}
-        .pt30 {padding-top: 30px !important;}
-        .pb30 {padding-bottom: 30px !important;}
-        .gray {background: #eee;}
+                           margin: 10px 0;} 
+        .txtWrap p{margin-bottom:20px;}
+        /* a 태그는 인라인 width 값이 적용 안되서 
+        무조건 display: block 을 해줘야한다.*/
+        .btn {display: block;
+              width: 200px;
+              line-height: 40px;
+              text-align: center;
+              border: 1px solid #000;
+              border-radius: 20px;
+              transition: 0.3s;}
+        .btn:hover {background: #000;
+                    color:#fff;}
+        .sliderTab {position: absolute; /* 1 */
+                    width: 100%; /* 1-1 */
+                    background: orange;
+                    left:0;
+                    bottom: 0; 
+                    /* top:0; 맨 위에 위치 */}
+        .sliderTab a {display: block; 
+                      float:left;
+                      /* a inline이라 block 값 블럭으로 되면,
+                      float:left;로 정렬 */
+                      width:calc(100% / 3);
+                      line-height: 40px;
+                      text-align: center;
+                      color: #fff;}
+        .sliderTab a:hover,
+        .sliderTab a.active {background: red;}
     </style>
 </head>
 <body>
-
-     <header id="header">
-         <div class="container">
-             <ul class="clearfix">
-                 <li><a href="#">menu1</a></li>
-                 <li><a href="#">menu2</a></li>
-                 <li><a href="#">menu3</a></li>
-                 <li><a href="#">menu4</a></li>
-                 <li><a href="#">menu5</a></li>
-                 <li><a href="#">menu6</a></li>
-             </ul>
-         </div>
-     </header>
-     <div class="container mb30">
-         <ul class="slider">
-             <li><img src="images/pc01.jpg" alt=""></li>
-             <li><img src="images/pc02.jpg" alt=""></li>
-             <li><img src="images/pc03.jpg" alt=""></li>
-         </ul>
-         <div class="nextBtn">
-             <img src="images/next.png" alt="">
-         </div>
-         <div class="prevBtn">
-             <img src="images/prev.png" alt="">
-         </div>
-     </div>
-     
-     <div class="gray pt30 pb30">
-     <section class="container mb30" id="section1st">
-        <h2>GALLERY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, fuga?</p>
-         <ul class="clearfix">
-             <li>
-                 <img src="../images/testimg.jpg" alt="">
-                 <div class="overlay">TOP</div>
-             </li>
-   
-             <li>
-                 <img src="../images/testimg.jpg" alt="">
-                 <div class="overlay">TOP</div>
-             </li>
-   
-             <li>
-                 <img src="../images/testimg.jpg" alt="">
-                 <div class="overlay">TOP</div>
-             </li>
-   
-             <li>
-                 <img src="../images/testimg.jpg" alt="">
-                 <div class="overlay">TOP</div>
-             </li>   
-         </ul>
-     </section>     
-     </div>
+<!--
+    <div class="slider">
+        <div><img src="" alt=""></div>
+    </div>
+    div / ul 둘 중 하나로 작업 
+-->
+ <div class="wrap">
+           <ul class="slider">
+            <li>
+            <img src="images/main_slider01.jpg" alt="">
+            <div class="txtWrap">
+                <h2>Lorem ipsum dolor sit.1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, dolor.</p>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+            </li>            
+            <li>
+            <img src="images/main_slider01.jpg" alt="">
+            <div class="txtWrap">
+                <h2>Lorem ipsum dolor sit.2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, dolor.</p>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+            </li>            
+            <li>
+            <img src="images/main_slider01.jpg" alt="">
+            <div class="txtWrap">
+                <h2>Lorem ipsum dolor sit.3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, dolor.</p>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+            </li>
+        </ul>
+        <div class="sliderTab">
+            <!-- 자바스크립트 index는 0부터 시작 -->
+            <a href="#" data-slide-index="0">menu1</a>
+            <a href="#" data-slide-index="1">menu2</a>
+            <a href="#" data-slide-index="2">menu3</a>
+        </div>
+</div>
 </body>
 </html>
