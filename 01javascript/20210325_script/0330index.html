@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>script</title>
+    <script>
+        let st = "hello" + "javascript";
+        //st = st + "!!"; (st += "!!"; 같음)
+        st += "!!";
+        
+        //st = st + "반갑습니다."; ( st += "반갑습니다."; 같음)
+        st += "반갑습니다.";
+        document.write(st+"1");
+         alert(st+"2"); // 경고창
+         console.log(st+"3"); //f12 console 창에서 확인
+    </script>
+</head>
+<body>
+    <div>
+        <script>
+            let tag ="<div>test</div>"
+            tag += "<img src='../../images/testimg.jpg'>"
+            document.write(tag)
+        </script>
+    </div>
+</body>
+</html>
