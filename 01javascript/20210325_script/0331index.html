@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+  // let 을 var로 사용해도 상관없음
+   let x=5;
+   let y=7;
+   let result;
+   result = ( x > y )? x : y ;
+   // 5 > 7 : 5가 칠보다 크다 '거짓 false'
+   document.write("큰값 : " + result + "<br>");
+   result = ( x > y )? x-y : y-x;
+   document.write("차이값 : " + result);
+
+  //  x = x + 1; (x += 1; 과 같다)
+  x += 1;
+   console.log("x값 : " + x)
+   // F12 개발자도구창 'console' 에서 확인 가능
+  </script>
+</head>
+<body>
+
+</body>
+</html>
