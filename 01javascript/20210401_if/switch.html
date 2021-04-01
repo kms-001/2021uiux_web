@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <!-- <div id="week"></div> -->
+  오늘은 <span id="week"></span> 입니다.
+    <script>
+      var week = new Date();
+      var day;
+      // .getDay(); 0일 1월 2화 3수 4목 5금 6토 7일
+      //document.write(week);
+      // Thu Apr 01 2021 11:14:36 GMT+0900 (대한민국 표준시)
+      document.getElementById("demo").innerHTML = week.getDay();
+      // 4 출력
+      // if(week.getDay() ==4){}
+      //   day = "목요일";
+      if(week.getDay() == 0){
+        day = "일요일";
+      }else if(week.getDay() == 1){
+        day = "월요일";
+      }else if(week.getDay() == 2){
+        day = "화요일";
+      }else if(week.getDay() == 3){
+        day = "수요일";
+      }else if(week.getDay() == 4){
+        day = "목요일";
+      }else if(week.getDay() == 5){
+        day = "금요일";
+      }else{
+        day = "토요일"
+      }
+         document.getElementById("week").innerHTML = day;
+      // document.getElementById("week").innerHTML = "목요일"
+      // 목요일 출력
+    </script>
+</body>
+</html>
