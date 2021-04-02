@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      * {margin:0; padding: 0;}
+      /* div.box1, div.box2, div.box3 {width: 200px;
+                                   height: 200px;
+                                   display: flex;
+                                   justify-content: center;
+                                   align-items: center;}
+      div.box1{background: skyblue;}
+      div.box2{background: red;
+              position: absolute;
+              left:100px; top:50px;}
+      div.box3{background: orange;} */
+
+      .boxWrap {width: 100px;
+                height: 100px;
+                background: red;
+                overflow: hidden;
+                position: relative;}
+      .boxWrap a {display: block;
+                  width: 100px; height: 100px;
+                  background: skyblue;}
+      /* a 태그는 인라인요소 width heigth 값이 적용되지 않음 */
+      .boxWrap div.box10{position:absolute;
+                        bottom:0;
+                        background: #f00;
+                        width: 100%;}
+  </style>
+</head>
+<body>
+  <!-- <div class="box1">box1</div>
+  <div class="box2">box2</div>
+  <div class="box3">box3</div> -->
+
+  <div class="boxWrap">
+    <a href="#">test</a>
+    <div class="box10">view</div>
+  </div>
+</body>
+</html>
