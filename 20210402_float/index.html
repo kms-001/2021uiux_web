@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
+  <title>float</title>
+  <script>
+  $(document).ready(function(){
+      $(".slider").bxSlider({
+          controls:false,
+          pager:false,
+      });
+  });
+  </script>
+  <style>
+  /* float 1번 */
+  .wrap{width: 500px;
+        height: 50px;
+        margin: 0 auto;
+        background: #ccc;
+        margin-bottom: 30px;}
+  .wrap .box1 {width: 100px;
+              background: skyblue;
+              float:left;
+              text-align: center;
+              line-height: 30px;
+              margin-top: 10px;
+              margin-left:10px;}
+  .wrap .box2 {width: 100px;
+              background: pink;
+              float:right;
+              text-align: center;
+              line-height: 30px;
+              margin-top: 10px;
+              margin-right: 10px;}
+
+  /* float 2번 */
+  .menuWrap {width: 1000px;
+             height: 40px;
+            margin: 0 auto;
+            background: #ccc;
+            margin-bottom: 30px;}
+  .menu {width: 800px;
+         .background: skyblue;
+         margin: 0 auto;}
+  .menuWrap ul li {float: left;
+                  width:calc(800px / 5);
+                  background: skyblue;
+                  margin-top: 5px;}
+  .menuWrap ul li:nth-child(2n) {background: pink;}
+  .menuWrap ul li a {line-height: 30px;
+                    text-align: center;
+                    display: block;}
+
+  /* float 3번 */
+.header {width: 1000px;
+        height: 80px;
+        background: #ccc;
+        margin: 0 auto;
+        margin-bottom: 30px;;}
+.header img {display: block;
+            width: 70px;
+            margin: 0 auto;
+            padding-top:5px;}
+.logMenu {width: 800px;
+          margin: 0 auto;}
+.logMenu ul li {float:left;
+                width:calc(800px / 5);
+                background: skyblue;}
+.logMenu ul li a {line-height: 30px;
+                  text-align: center;
+                  display: block;}
+.logMenu ul li:hover {background: pink;}
+
+  /* float 4번 */
+.hWrap {width: 900px;
+        margin: 0 auto;
+        background: #ccc;
+        margin-bottom: 10px;
+        height: 120px}
+.hWrap img {display: block;
+            margin: 0 auto;
+            padding: 10px 0;}
+
+.hMenu {width: 700px;
+        margin: 0 auto;}
+.hMenu ul li {float:left;
+              width:calc(700px / 4);
+              background: pink;}
+.hMenu ul li:hover {background: skyblue;}
+.hMenu ul li a {line-height: 30px;
+               text-align: center;
+               display: block;}
+
+.sliderWrap {1000px;
+         margin: 0 auto;}
+.slider img {width: 1000px;
+              margin: 0 auto;
+              display: block;}
+.bx-wrapper {-moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            background: #fff;
+            margin-bottom: 10px;}
+
+.container {width: 900px;
+            height: 250px;
+            margin: 0 auto;
+            background: skyblue;
+            margin-bottom: 10px}
+
+.container .aside {float:left;
+                    width: 400px;
+                    height: 200px;
+                    background: pink;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;}
+.container .content {float:right;
+                    width: 400px;
+                    height: 200px;
+                    background: #ccc;
+                    margin-top: 20px;
+                    margin-right: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;}
+
+.footer {width: 900px;
+        height:100px;
+        margin: 0 auto;
+        background: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;}
+  </style>
+</head>
+<body>
+<!-- float 1번 -->
+  <div class="wrap">
+    <div class="box1">left</div>
+    <div class="box2">right</div>
+  </div>
+
+<!-- float 2번 -->
+  <div class="menuWrap">
+    <div class="menu">
+      <ul class="clearfix">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- float 3번 -->
+<header class="header">
+    <a href="#"><img src="../images/car.png" alt="자동차"></a>
+  <div class="logMenu">
+    <ul class="clearfix">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+      <li><a href="#">menu5</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- float 4번 -->
+<header class="hWrap">
+  <a href="#"><img src="../images/logo.png" alt="로고"></a>
+  <div class="hMenu">
+    <ul class="clearfix">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+</header>
+<div class="sliderWrap">
+  <ul class="slider">
+      <li><img src="../images/pc01.jpg" alt=""></li>
+      <li><img src="../images/pc02.jpg" alt=""></li>
+      <li><img src="../images/pc03.jpg" alt=""></li>
+  </ul>
+</div>
+<div class="container">
+  <aside class="aside">aside</aside>
+  <div class="content">content</div>
+</div>
+  <div class="footer">footer</div>
+
+</body>
+</html>
