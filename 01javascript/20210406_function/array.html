@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const city=["seoul","busan","incheon","daegu"];
+    function print(){
+      document.write("<ul>");
+
+      for(let i=0;i<city.length;i++){
+      console.log(city[i]);
+      document.write("<li>");
+      document.write(city[i]);
+      document.write("</li>");
+    }
+
+      document.write("</ul>");
+
+    }
+    print();
+
+    const img = ["pc01.jpg","pc02.jpg","pc03.jpg"];
+    function imgView(){
+      for(let i=0;i<img.length;i++){
+        document.write("<img src='../../images/"+img[i]+"'>");
+        // ("<img src=\""+img[i]+"\">");
+      }
+    }
+  </script>
+
+  <div>
+    <script>
+      imgView();
+    </script>
+  </div>
+</body>
+</html>
