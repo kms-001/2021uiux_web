@@ -31,6 +31,28 @@
         // ("<img src=\""+img[i]+"\">");
       }
     }
+
+    const num = [95,,75,72,68];
+    let getAvg;
+    function printAvg(){
+      let sum = 0;
+      let count = 0;
+      for(let i=0;i<num.length;i++){
+      // sum = sum + i;
+      if(num[i] === undefined){
+        // === 타입을 비교할 때 사용
+        continue;
+      }else{
+        sum += num [i];
+        count++; // 카운트를 누적
+      }
+
+      }
+      console.log("총 합 :" +sum+ ", 응시생:" + count);
+      return ( sum / count );
+    }
+    getAvg = printAvg();
+    document.write("전체평균 : " + getAvg);
   </script>
 
   <div>
