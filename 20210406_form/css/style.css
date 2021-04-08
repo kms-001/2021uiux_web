@@ -63,7 +63,8 @@ legend,.blind{position: absolute;
                                       text-align: center;
                                       line-height:49px;
                                       border-right: 1px solid #eee;}
-.content fieldset .field.birth select {width: 110px; height: 29px;
+.content fieldset .field.birth select,
+.content fieldset .field.confirm select{width: 110px; height: 29px;
                                       border:0 none;
                                       font-size: 0.9rem;
                                       text-indent: 5px;
@@ -71,14 +72,27 @@ legend,.blind{position: absolute;
                                       margin-top: 10px;
                                       margin-left: 10px;
                                       margin-right: 7px;}
-.content fieldset .field.birth input {float:left;}
-.content fieldset .field.birth .field_wall {float:left;
+.content fieldset .field.birth input,
+.content fieldset .field.confirm input {float:left;}
+.content fieldset .field.birth .field_wall,
+.content fieldset .field.confirm .field_wall{float:left;
                                             width: 0; height: 29px;
                                             border-right: 1px solid #cdcdcd;
                                             text-indent: -9999px;
                                             margin-top: 10px;}
+.content fieldset .field.confirm .btn-click {width: 99px; height: 31px;
+                                            border: 1px solid #dcdcdc;
+                                            background: #fff;
+                                            cursor: pointer;
+                                            margin-right: 13px;
+                                            margin-top: 8px;;}
+
+input:focus {outline: none;}
+/* input:focus {outline: 1px solid red;} */
 
 /* common */
 .w458{width: 458px !important}
 .w130{width: 130px !important}
 .w145{width: 145px !important}
+.w205{width: 205px !important}
+.w332{width: 332px !important}
