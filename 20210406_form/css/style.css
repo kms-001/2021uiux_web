@@ -45,3 +45,9 @@ legend,.blind {position: absolute;
                                 background: #1fbc02 url(../images/btn_join2.gif) no-repeat 50% 3px;
                                 text-indent: -9999px;
                                 cursor: pointer;}
+
+.content fieldset .field.btn-radio {height: 49px;}
+
+
+/* common */
+.w458{width: 458px; !important}
