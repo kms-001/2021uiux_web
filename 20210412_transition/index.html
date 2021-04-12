@@ -45,7 +45,51 @@
     .cWrap div {width: 30px; height: 4px; background: #fff;
                 position:absolute; border-radius: 4px;}
     .cWrap .bar2 {transform:rotate(90deg);}
-    .box:hover .cWrap {transform:translate(-50%, -50%) rotate(90deg);}
+    .box:hover .cWrap {transform:translate(-50%, -50%) rotate(180deg);}
+
+      /* -------------------------------------------------------------*/
+
+    .box01 {width: 300px; height: 300px;
+            display: flex; justify-content: center;
+            align-items: center; position: relative;
+            transition:.3s; overflow: hidden; cursor: pointer;}
+    .box01 img {position: absolute;}
+    .box01 .bg {width: 100%; height: 100%; background:#000;
+               opacity:0; position: absolute;
+               transform: scale(0.7); transition: .3s}
+    .box01 h3 {position: absolute; .background: skyblue; color:white;
+               transform: translateY(160px); transition: .3s}
+    .box01:hover h3 {transform: translateY(0);}
+    .box01:hover img{transform:scale(1.1)}
+    .box01:hover .bg{opacity:0.5; transform: scale(0.6);}
+
+    /* -------------------------------------------------------------*/
+
+    .btnWrap {width: 200px; height: 40px; position: relative;}
+    .btnWrap a {display: block;
+                text-align: center;
+                line-height:35px;}
+    .btnWrap .bar10 {width: 0; height: 5px; background: red;
+                    position: absolute; left:0; bottom: 0;
+                    /* left:0; bottom:0; 왼쪽에서 오른쪽
+                       right:0; bottom:0; 오른쪽에서 왼쪽 */
+                    transition: .3s}
+    .btnWrap:hover .bar10 {width: 100%;}
+
+    /* .btnWrap .bar10 {width: 100%; height: 0; background: red;
+                    position: absolute; left:0; bottom: 0;
+                    transition: .3s}
+    .btnWrap:hover .bar10 {.width: 100%; height: 5px;} */
+
+    /* -------------------------------------------------------------*/
+    .btnWrap01 {width: 200px; height: 40px; position: relative;}
+    .btnWrap01 a {display: block; text-align: center;
+                  line-height: 40px; position: relative;}
+    .btnWrap01 .bar10 {position: absolute; width: 100%; height: 100%;
+                      background: #00f; left:0; bottom: 0; transition: .3s;
+                      transform: scaleX(0); transform-origin: 0 50%;}
+    .btnWrap01:hover .bar10 {transform: scaleX(1); transform-origin: 100% 50%;}
+    .btnWrap01:hover a {color:white;}
   </style>
 </head>
 <body>
@@ -56,5 +100,24 @@
       <div class="bar2"></div>
     </div>
   </div>
+
+  <div class="box01">
+    <img src="../images/testimg.jpg" alt="">
+    <div class="bg">1</div>
+    <h3>TOUR</h3>
+  </div>
+
+    <div class="btnWrap">
+      <a href="#">BUTTON</a>
+      <div class="bar10"></div>
+    </div>
+
+    <div class="btnWrap01">
+      <div class="bar10"></div>
+      <a href="#">BUTTON</a>
+    </div>
+
+
+
 </body>
 </html>
