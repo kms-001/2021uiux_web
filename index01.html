@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .wrap {width: 100%; background: beige;}
+    .formWrap {width:1200px;
+               margin: 0 auto;
+               background: skyblue;}
+
+    .formWrap form {width: 480px; height: 300px; background: white;
+                    padding-left:160px; padding-top: 25px; font-size:14px}
+    .formWrap fieldset{border:0 none;}
+    .formWrap legend {position: absolute;
+                      left: 0; top: -9999px;}
+
+    .formWrap #golo {width: 275px; height: 30px; margin-bottom: 20px;  margin-top: 5px;}
+    .formWrap #sdate, .formWrap #edate {width: 125px; height: 30px; margin-top:15px;}
+    .sdate {position: absolute; top: 85px; }
+    .edate {position: absolute; top:85px; padding-left: 25px}
+    .formWrap #sdate {float:left; margin-bottom: 20px; }
+    .formWrap #edate {float:left; margin-left: 25px;}
+    .formWrap #cgrade {width: 115px; height: 30px; float:left; margin-top: 15px;}
+    .formWrap #num1,
+    .formWrap #num2 {width: 65px; height: 30px; float:right;
+                    margin-top: 15px;}
+    .formWrap #num1 {margin-right: 50px;}
+    .formWrap #num2 {margin-right: 5px}
+    .cgrade, .adult, .child {position: absolute; top:140px;padding-top: 10px;}
+    .adult {padding-left: 20px}
+    .child {padding-left: 90px;}
+
+    button {width: 275px; height:35px;
+           border:0 none;
+           background: #EA4F1F;
+           border-radius: 5px;
+           margin-top:20px;
+           color:white; font-weight: bold;
+           display: flex;
+           justify-content: center;
+           align-items: center;}
+    button img {padding-right: 5px;}
+
+    .sliderTab {background: #0099CB;
+                position: absolute;
+                width: 132px;
+                height: 300px;
+                top:0;}
+
+    .sliderTab a {display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 height:calc(300px /4);
+                 font-size: 12px;
+                 font-weight: 600;}
+    .sliderTab img{padding-right: 5px;}
+    /* .sliderTab a:hover,
+    .sliderTab a.active {background: #f4faa9;} */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+  <div class="formWrap">
+    <form>
+      <fieldset>
+        <legend>여행일정</legend>
+        <ul>
+          <li>
+            <label for="golo">가고싶은 나라를 선택하세요.</label>
+            <select name="golo" id="golo">
+              <option value="">선택하세요</option>
+              <option value="미국">미국</option>
+              <option value="일본">일본</option>
+              <option value="중국">중국</option>
+            </select>
+          </li>
+          <li class="clearfix">
+            <div>
+              <label for="sdate" class="sdate">출발일</label>
+              <input type="date" id="sdate" >
+            </div>
+            <div>
+              <label for="edate"  class="edate">도착일</label>
+              <input type="date" id="edate" >
+            </div>
+          </li>
+          <li class="clearfix">
+            <div>
+              <label for="cgrade" class="cgrade">좌석등급</label>
+              <select name="cgrade" id="cgrade">
+                <option value="비지니스">비지니스</option>
+                <option value="이코노미">이코노미</option>
+                </select>
+            </div>
+            <div>
+              <label for="num1" class="adult">성인</label>
+              <input type="number" id="num1" placeholder="1">
+            </div>
+            <div>
+              <label for="num2" class="child">아이</label>
+              <input type="number" id="num2" placeholder="1">
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="button" name="button">
+        <img src="images/Vector2.png" alt="">검색하기</button>
+    </form>
+    <div class="sliderTab">
+      <ul>
+        <li><a href="#" id=""> <img src="images/search_icon1.png" alt="">공항예약</a></li>
+        <li><a href="#" id=""> <img src="images/search_icon2.png" alt="">숙소예약</a></li>
+        <li><a href="#" id=""> <img src="images/search_icon3.png" alt="">렌트카예약</a></li>
+        <li><a href="#" id=""> <img src="images/search_icon4.png" alt="">휴양지</a></li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+</body>
+</html>
