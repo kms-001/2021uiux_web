@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script>
+    //문서를 읽고 사용한다라는 의미 $(document).ready(function(){
+    // 스크립트를 아래에서 사용할 경우는 사용할 필요 없음
+
+    $(document).ready(function(){
+      console.log( $("p").eq(1).css("background") );
+      $("p").eq(2).css("color","red");
+      document.getElementsByTagName("p")[3].style.color="blue";
+    });
+
+  </script>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tenetur accusamus id adipisci eos quas repudiandae! Dolorum aperiam accusantium quidem, laboriosam. Modi deleniti fugit incidunt beatae. Voluptates, voluptatum magnam dolore!</p>
+  <p>Natus provident veritatis, accusantium, minima eos vel. Quae soluta amet dolore ducimus, numquam placeat, explicabo aperiam consequuntur beatae laboriosam quia! Expedita natus aliquam suscipit labore aliquid delectus debitis, libero iste.</p>
+  <p>Neque architecto fugit libero accusantium, iusto minus numquam. Alias natus ratione sunt reiciendis voluptas facilis eaque sequi labore, cumque mollitia, sit rerum, aspernatur, at temporibus architecto excepturi rem. Soluta, tempora.</p>
+  <p>Error nulla quisquam, molestias possimus distinctio necessitatibus nihil veritatis incidunt reprehenderit voluptates in aut eius, voluptatem eum ad. Corporis, incidunt. Consequuntur in quia amet qui magnam aliquam, sunt et animi!</p>
+  <p>Architecto illo totam repellendus molestiae voluptatem error laboriosam blanditiis, repudiandae, aliquid quidem ab autem quia veniam possimus in recusandae perferendis quis ipsam explicabo, nulla soluta nemo debitis ullam quod consectetur.</p>
+
+  <ul class="tab">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+  <div class="boxWrap">
+    <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, sit.</div>
+    <div class="box2">2. Maiores obcaecati deserunt et perferendis ex itaque aliquid quas, alias.</div>
+    <div class="box3">3. Ipsam obcaecati quas, neque doloremque quae earum. Nostrum, temporibus, .</div>
+    <div class="box4">4. Accusamus laudantium voluptate vitae itaque neque dolor mollitia rem veritatis!</div>
+    <div class="box5">5. Tempora blanditiis sint minima ab quae tempore soluta atque deleniti.</div>
+  </div>
+
+  <script>
+    //.click() 이벤트 메소드 .on("click",function(){}) = .click(function(){})
+    //$(".boxWrap>div").hide();    box1~box5를 안보이게
+    //$(".boxWrap>div").eq(0).show();    box 첫번째 순서만 보이게
+
+    $(".boxWrap>div").hide().eq(0).show();
+
+    $(".tab>li").click(function(){
+      // $(".tab>li").eq(0).css("background","pink");
+      $(".tab>li").css("background","white");
+      $(this).css("background","pink");
+      console.log($(this).index());
+
+      // $(".boxWrap>div").hide();
+      // $(".boxWrap>div").eq($(this).index()).show();
+      $(".boxWrap>div").hide().eq($(this).index()).show();
+    });
+  </script>
+</body>
+</html>
