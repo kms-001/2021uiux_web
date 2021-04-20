@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- cdn -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script>
+    // jquery(document).ready(function(){});
+    $(document).ready(function(){
+      // $("button.btn").on("click",function(){});
+      // document.getElementsByClassName("btn")[0].addEventListener("click",function(){})
+      $(".btn").click(function(){
+        $(".box").show();
+      // document.querySelector(".box").style.display = "block";
+      });
+      $(".box").click(function(){
+      // $(".box").hide();
+       $(this).hide();
+     });
+
+     $("ul.gnb>li").click(function(){
+       console.log ( $(this).index() );
+     // this (li 자기 자신)의 index 값을 가지고 올 때 사용
+     
+     // $(this).css("background-color"); get 값을 가지고 온다
+     // $(this).css("background-color","skyblue"); //set 클릭 할 때 한개씩 색상
+     // $("ul.gnb>li").css("background-color","skyblue"); 전체가 색상
+
+      $("ul.gnb>li").css("background-color","white");
+      $(this).css("background-color","skyblue");
+      console.log( $(this).css("background-color") );
+
+     });
+    });
+  </script>
+
+  <style>
+    .box {display: none;}
+  </style>
+
+</head>
+<body>
+  <button class="btn">click</button>
+  <div class="box">
+    HELLO
+  </div>
+  <ul class="gnb">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+</body>
+</html>

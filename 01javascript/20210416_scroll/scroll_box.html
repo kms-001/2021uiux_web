@@ -34,40 +34,29 @@
 
   <script>
     const scrollY = document.querySelector(".scrollView");
-    //querySelector 선택자에 해당하는 첫번째 요소만 선택
-    //.scrollView 첫번째 dom 선택하여 scrollY변수에 저장
     const boxPos = document.querySelectorAll(".box");
-    //querySelectorAll 해당 선택자에 해당하는 모든 요소를 가져옴
     const winH = document.querySelector(".winHeight")
 
+      function view(){
+        const winHeight = window.innerHeight/2;
+        winH.innerHTML = winHeight;
+        window.addEventListener("scroll",function(){
 
-      window.addEventListener("scroll",function(){
-      // scroll 이벤트를 window에 출력
-      const scrollYPosition = window.pageYOffset;
-      scrollY.innerHTML = scrollYPosition;
 
-      // if(700<scrollYPosition){
-      //   boxPos[0].classList.add("boxview");
-      // }else{
-      //   boxPos[0].classList.remove("boxview");
-      // }
-      for(let i=0;i<boxPos.length;i++){
-        if(boxPos[i].offsetTop<scrollYPosition + winHeight){
-          boxPos[i].classList.add("boxview");
-          // classList.add : 클래스를 필요에 따라 삽입한다.
-        }else{
-          boxPos[i].classList.remove("boxview");
-          // classList.remove : 클래스를 필요에 따라 제거한다.
+        const scrollYPosition = window.pageYOffset;
+        scrollY.innerHTML = scrollYPosition;
+
+        for(let i=0;i<boxPos.length;i++){
+          if(boxPos[i].offsetTop<scrollYPosition + winHeight){
+            boxPos[i].classList.add("boxview");
+          }else{
+            boxPos[i].classList.remove("boxview");
+          }
         }
-      }
-    });
-
+      });
+    }
     // window.addEventListener("resize",function(){});
     window.addEventListener("resize",view);
-    function view(){
-      const winHeight = window.innerHeight/2;
-      winH.innerHTML = winHeight;
-    }
     view();
   </script>
 
