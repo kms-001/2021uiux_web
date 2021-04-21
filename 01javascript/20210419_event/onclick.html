@@ -9,7 +9,9 @@
   html,body{height: 100%;}
   </style>
 </head>
-<body onmousemove="where(event)">
+<!-- <body onmousemove="where(event)">
+콘솔 창에서 X값 Y값 확인할 수 있는 -->
+<body>
   정보입력<input type="text" id="exp" value="0"><br>
   값<input type="text" id="result">
   <input type="button" value="계산" onclick="calc()">
@@ -46,12 +48,24 @@
     function out(obj){
       obj.style.border = "1px solid lightgray"
     }
+    let width = 0;
     function wheel(event,obj){
-      console.log(event.wheelDelta)
-    }
-    function where(e){
-      console.log("x값:"+e.clientX+", y값:"+ e.clientY)
-    }
+      //console.log(event.wheelDelta);
+
+      if(event.wheelDelta < 0){
+        width--;
+        if(width<0) {width = 0;}
+      }else{
+        width++;
+      }
+      console.log(width);
+      obj.style.borderStyle = "solid";
+      obj.style.borderWidth = width + "px";
+      // obj.style.borderWidth = `${width} px`;
+        }
+    // function where(e){
+    //   console.log("x값:"+e.clientX+", y값:"+ e.clientY)
+    // }
   </script>
 
 </body>
