@@ -38,10 +38,9 @@
   "../../images/winter.jpg"
   ];
 
-
   // $(".wrapper li").eq(0).click(function(){
   //   $(".image img").attr("src","../../images/spring.jpg");
-
+//1번째 방법
   // $(".wrapper li").eq(0).click(function(){
   //   $(".image img").attr("src",viewImg[0]);
   // });
@@ -55,9 +54,17 @@
   //    $(".image img").attr("src",viewImg[3]);
   // });
 
-  $(".wrapper li").click(function(){
-    let i = $(this).index();
-  });
+//2번째 방법
+  // $(".wrapper li").click(function(){
+  //   let t = $(this).index();
+  // $(".image img").attr("src",viewImg[t])
+  //   });
+
+  for(let i=0;i<$(".wrapper li").length;i++){
+    $(".wrapper li").eq(i).click(function(){
+    $(".image img").attr("src",viewImg[i]);
+    });
+  }
 
 
 </script>
