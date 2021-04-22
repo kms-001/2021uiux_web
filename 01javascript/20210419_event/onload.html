@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onload</title>
+  <script>
+    // window.onload = function(){
+    //   alert("hi3");
+    //   dLoad();
+    // }
+
+    // function dLoad(){
+    //   alert("hi4")
+    // }
+  </script>
+  <script>
+    function cImg(){
+      // alert("hi"); 창에서 바나나로 변경하면 hi 팝업창이 뜸
+      const sel = document.querySelector("#sel");
+      const img = document.querySelector("#myImg");
+      const imgW = document.querySelector("#imgW");
+
+      img.onload = function(){
+      imgW.innerHTML = img.width;
+      }
+
+      let index = sel.selectedIndex;
+      console.log(index);
+      img.src = sel.options[index].value;
+      console.log(img.width+"px");
+
+
+    }
+  </script>
+</head>
+<body onload="cImg()">  <!-- <body  onload="dLoad()"> -->
+  <script>
+    // window.onload = function(){
+    //   alert("hi2");
+    // }
+  </script>
+  <span id="imgW"></span>
+  <form>
+    <select id="sel" onchange="cImg()">
+      <option value="../../images/apple.png">사과</option>
+      <option value="../../images/banana.png">바나나</option>
+      <option value="../../images/strawberry.png">딸기</option>
+    </select>
+  </form>
+  <p>
+    <img src="../../images/apple.png" alt="" id="myImg">
+  </p>
+
+
+</body>
+</html>
