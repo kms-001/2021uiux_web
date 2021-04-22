@@ -17,7 +17,7 @@
 
     #glayLayer {width: 100%; height: 100%;
                 background: #000; position: fixed;
-                left:0; top:0; opacity:.6;}
+                left:0; top:0; opacity:.6; display: none;}
 
     #overLayer {position: fixed; left:50%; top:50%;
                transform:translate(-50%, -50%); display: none;}
@@ -61,11 +61,18 @@
     </div> -->
 
     <script>
-      $("body").append("<div id='#glayLayer'></div><div id='overLayer'></div>");
+      $("body").append("<div id='glayLayer'></div><div id='overLayer'></div>");
       $(".modal").click(function(e){
         e.preventDefault(); // 임시적으로 되어 있는 값을 막는
         const modal = $(this).attr("href");
-        console.log(modal)
+        console.log(modal);
+        $("#glayLayer,#overLayer").show();
+        // $("#overLayer").html("<img src='"+ modal + "'>")
+        $("#overLayer").html(`<img src="${modal}">`)
+      });
+
+      $("#glayLayer,#overLayer").click(function(){
+        $("#glayLayer,#overLayer").hide();
       });
     </script>
 </body>
