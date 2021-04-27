@@ -10,8 +10,10 @@
   <style>
     .toggleMenu {width: 50px; height: 50px;
                  border: 1px solid #000;
-                 position: relative;
-                 cursor:pointer;}
+                 position: absolute;
+                 cursor:pointer;
+                 right: 0; top: 0;
+                 display: none;}
 
     .toggleMenu div{width: 34px; height: 5px;
                     background: #000; border-radius:3px;
@@ -28,14 +30,54 @@
     .toggleMenu.change .bar2{opacity:0}
     .toggleMenu.change .bar3{left:50%; top:50%;
                              transform:translate(-50%,-50%) rotate(45deg)}
+
+    .menuWrap {width: 1200px; height: 50px;
+               margin: 0 auto; background: pink;
+               position: relative;}
+    .menuWrap h1 {background: skyblue;
+                  width: 100px; text-align: center; height: 50px;}
+    #myTopMenu {position: absolute; left: 100px; top: 0;}
+    #myTopMenu a{display: block; float: left;
+                 padding: 14px 10px;}
+
+    /* 모바일 버전 */
+    @media screen and (max-width:576px){
+      body{background: green;}
+      .menuWrap {width: 100%;}
+      .toggleMenu {display: block;}
+      /* 모바일에서만 보여야하는 toggleMenu */
+      #myTopMenu {position: fixed;
+                  width: 100%; height: 100%;
+                  background: orange;
+                  left: -100%; top: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center}
+      .topNav{background: red; width: 50%;}
+      .topNav a{float:initial !important;
+      /* initial float의 기본값 / none 사용도 됨 */
+                text-align: center;}
+    }
   </style>
 </head>
 <body>
+<div class="menuWrap">
+  <h1>logo</h1>
+  <div id="myTopMenu">
+    <nav class="topNav clearfix">
+      <a href="#">HOME</a>
+      <a href="#">NEWS</a>
+      <a href="#">CONTACT</a>
+      <a href="#">PRODUCT</a>
+    </nav>
+  </div>
+
   <div class="toggleMenu">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
   </div>
+</div>
 
   <script>
     $(".toggleMenu").click(function(){
@@ -46,6 +88,17 @@
       $(".toggleMenu").removeClass("change");
     }
     });
+
+    // const toggleMenu = document.getElementsByClassName("toggleMenu");
+    // toggleMenu[0].addEventListener("click",function(){
+    //   const toggle = toggleMenu[0].getAttribute("class");
+    //   if(toggle == "toggleMenu"){
+    //     toggleMenu[0].classList.add("change");
+    //   }else{
+    //     toggleMenu[0].classList.remove("change");
+    //   }
+    // });
+
   </script>
 </body>
 </html>
