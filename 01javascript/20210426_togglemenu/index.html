@@ -19,7 +19,7 @@
                     background: #000; border-radius:3px;
                     position: absolute; left:50%;
                     transform:translateX(-50%);
-                    transition:0.3s}
+                    _transition:0.3s}
 
     .bar1{top:11px;}
     .bar2{top:22px;}
@@ -39,6 +39,7 @@
     #myTopMenu {position: absolute; left: 100px; top: 0;}
     #myTopMenu a{display: block; float: left;
                  padding: 14px 10px;}
+    .content {width: 1200px; margin: 0 auto;}
 
     /* 모바일 버전 */
     @media screen and (max-width:576px){
@@ -49,14 +50,32 @@
       #myTopMenu {position: fixed;
                   width: 100%; height: 100%;
                   background: orange;
-                  left: -100%; top: 0;
+                  left: 0; top: -100%;
+                  /* left: -100%; top: 0; */
                   display: flex;
                   justify-content: center;
-                  align-items: center}
+                  align-items: center;
+                  transition: .3s}
       .topNav{background: red; width: 50%;}
       .topNav a{float:initial !important;
       /* initial float의 기본값 / none 사용도 됨 */
                 text-align: center;}
+      .content {width:100%; padding:20px 16px;}
+    }
+
+    /*태블릿 버전 */
+    @media screen and (min-width:577px) and (max-width:991px){
+      body{background: skyblue;}
+      .menuWrap {width: 100%;}
+      #myTopMenu {left:initial; right: 0;}
+      .content {width:100%; padding:20px 16px;}
+    }
+
+    /* PC 버전 */
+    @media screen and (min-width:992px){
+      .menuWrap {position: fixed; left: 50%;
+                transform: translateX(-50%);}
+      .content {padding-top: 70px;}
     }
   </style>
 </head>
@@ -78,15 +97,30 @@
     <div class="bar3"></div>
   </div>
 </div>
+  <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit adipisci aliquid ab laborum accusamus magnam, voluptas dolores quas impedit animi dolorum, eos, vero doloribus eaque? Id obcaecati, excepturi maiores ratione quia impedit, voluptatum. Rerum tenetur repellendus distinctio reprehenderit voluptas amet possimus! Veniam officia tenetur nihil hic numquam maiores quisquam quae rem similique, commodi autem odio obcaecati, omnis perferendis reiciendis deleniti quasi expedita, consectetur? Tenetur unde quisquam ut et, cum, eius cumque dignissimos dolorum ab molestias, amet accusamus recusandae totam soluta voluptate labore. Similique odit rerum sunt commodi, dignissimos dolorem ea debitis quisquam fugiat reprehenderit, maxime, laboriosam possimus veniam rem nam accusamus doloribus iusto sint. Aperiam eum cupiditate laboriosam reprehenderit. Veritatis, quibusdam quasi sint itaque. Dolore deserunt omnis, officiis fugiat sint voluptatem impedit, accusantium ducimus sed maiores obcaecati aspernatur possimus vitae inventore voluptates veritatis laborum iste voluptas iusto vero, laboriosam cumque. Obcaecati, amet! Tempore perspiciatis provident incidunt, sed aperiam neque, nostrum libero excepturi blanditiis accusantium corporis. Voluptatum aliquam repudiandae minima sequi ipsam eos, aut molestiae quaerat iste atque cum magni dolores beatae officiis ipsa pariatur, dignissimos earum? Eveniet, dolor ut nobis deleniti sit quaerat itaque facere vero, eaque voluptatibus, praesentium iure quo delectus! Amet rem perferendis rerum deserunt odio excepturi quasi tempore neque laudantium, illo harum corrupti adipisci repellat odit a ab magnam non accusantium nam molestiae praesentium ex nulla maxime, delectus! Vitae iste nemo porro beatae temporibus tempora deleniti voluptatibus, facilis, dicta eum, sapiente suscipit incidunt quasi. Cupiditate ipsum veritatis, libero, beatae velit excepturi unde odio temporibus, aliquid tempora iusto tempore aperiam sapiente aliquam? Nisi reprehenderit numquam commodi possimus vitae laboriosam, odio accusamus corrupti quas eos, alias soluta aperiam corporis ad ratione dicta facere repudiandae excepturi nesciunt voluptatibus animi eveniet laudantium voluptatum. Porro magnam tempore facere aperiam vel, aliquid fugit vitae maxime, commodi. Vero architecto laborum soluta beatae, eum saepe eius laboriosam, adipisci ad esse consequatur. Architecto accusantium omnis aliquid quod dicta consectetur fugiat. Voluptatem totam delectus nostrum maxime, ex, doloribus, aut dolor animi enim fuga facilis deserunt. Maxime tempora hic excepturi, odio molestiae doloribus accusamus suscipit quam tenetur necessitatibus ad doloremque. Eligendi voluptates obcaecati, iusto consequuntur accusamus totam perferendis, repellendus rerum earum illum consequatur expedita suscipit alias soluta enim libero corrupti ab labore voluptatum nemo dolor ipsam exercitationem hic aliquid veritatis! Modi optio placeat libero repudiandae debitis possimus ratione, iusto assumenda officiis quisquam odit harum iste laudantium ipsam, magni distinctio consectetur illo culpa autem soluta, officia accusantium, reiciendis architecto. Voluptatibus exercitationem labore libero perferendis quo nesciunt et! Itaque laudantium autem temporibus eos quos dicta dignissimos totam, molestias perspiciatis facilis delectus nobis voluptas sit ea iste? Eveniet, atque, aut. Suscipit eligendi repudiandae, ratione ea cumque aperiam sed. Esse inventore debitis tenetur harum, sequi, consequatur voluptatibus officia eveniet, iusto quasi temporibus delectus? Quibusdam temporibus, veniam expedita, illo animi libero, praesentium quos modi maxime sapiente dicta vitae architecto! A quis laborum blanditiis, quod, neque labore. Atque rem blanditiis ab saepe eos ipsa, ut nam deserunt. Ad natus eos neque beatae voluptates, sint in commodi similique modi incidunt nulla impedit placeat sed maxime.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nihil. Reiciendis illum quia animi ex, quaerat odio voluptatem doloremque culpa aspernatur consequuntur accusamus facilis labore provident expedita possimus tempore ipsam eaque dolores aliquam laborum architecto, nemo vero assumenda error! Magnam nam fugit error ad voluptatibus, veniam, consequuntur aliquam voluptatum tenetur culpa, nulla quae corporis veritatis. Saepe neque tempore aperiam beatae amet nam voluptatum sequi dolore temporibus, sit non nihil quasi laborum sunt iste dignissimos iusto ipsum? Consequuntur nulla, aliquid minima quasi rerum illo minus reiciendis, esse natus accusamus fugiat ad amet modi laborum, qui earum laboriosam, mollitia perspiciatis sapiente quod? Quisquam saepe, autem quas optio labore quod incidunt ad sit porro placeat sunt sequi velit architecto veniam vitae illum veritatis id fuga dolore eos harum sint, rerum est, neque quibusdam. Suscipit omnis sint non quia praesentium possimus rerum, blanditiis labore unde tenetur dolor voluptatibus, modi facere dignissimos vero itaque, temporibus ratione harum, natus laborum doloremque. Aliquid, eius, nostrum. Deserunt obcaecati libero voluptates sit, dolore quas eos neque iure nisi officiis eligendi enim, nobis ad, assumenda corporis. Perspiciatis vero illum commodi iste eveniet omnis harum culpa a reprehenderit tempore, quidem, libero fugiat doloremque cum ab labore accusantium sed repellendus? Reiciendis natus voluptatibus nisi, pariatur consequatur quas suscipit non voluptas! Quaerat reprehenderit inventore dolor, laboriosam facere, temporibus repudiandae dolores iusto sit autem porro voluptatem cupiditate sunt excepturi ipsa dolore fugit. Iure vel at, autem fuga nisi modi. Necessitatibus itaque commodi, deserunt libero unde ducimus repellat architecto, excepturi, natus dicta cum vitae non, iusto doloremque. Hic mollitia cum ad sunt ipsa temporibus error debitis, consectetur, nam sit doloremque quasi quis adipisci quibusdam sequi necessitatibus impedit ipsum libero distinctio, commodi fugiat. Maiores praesentium eius repudiandae, doloribus quas tenetur qui explicabo aliquam ducimus. Quis sequi consequuntur labore earum delectus minima, amet dolorum animi, aperiam ipsum ipsam esse blanditiis iusto corporis porro nobis unde ullam debitis sapiente. Magni ex in repellendus, non consequatur accusamus culpa dolores alias ipsam itaque sint dolore, aspernatur asperiores aliquid dicta corporis architecto, beatae necessitatibus laboriosam. Obcaecati sit, provident, sed animi doloribus omnis dolorem voluptatem dicta deleniti debitis suscipit quibusdam, doloremque cum. Doloribus quod, natus quam similique sunt culpa sed tempore sit, iure consequatur fugiat reprehenderit in consequuntur, harum itaque dicta nostrum quaerat? Optio id rerum voluptatem illo reprehenderit recusandae rem accusantium? Ipsam voluptas qui nulla quos, similique temporibus dicta sequi quia. Totam rerum porro sapiente. Minima veniam autem fugiat modi quisquam ea, fugit nulla voluptate error illum! Cumque veritatis voluptatibus, nobis ut nisi, quisquam officiis sed excepturi cupiditate, eligendi aliquam soluta cum placeat omnis magni pariatur perspiciatis. Cumque mollitia ex dolore provident earum voluptas obcaecati cupiditate ipsum quidem accusantium assumenda laborum aliquid asperiores a quo eaque, distinctio hic minima maiores magnam nam officiis quisquam ducimus. Et amet suscipit animi, culpa reprehenderit praesentium quisquam omnis beatae molestias soluta accusamus accusantium maiores repellat ducimus unde minima ullam consequatur laboriosam, corporis vero! Laboriosam reprehenderit sapiente voluptatum labore pariatur numquam temporibus reiciendis non quaerat consequuntur provident quae, facere quam, autem repellendus ab, fuga id repudiandae.
+  </div>
 
   <script>
     $(".toggleMenu").click(function(){
       const toggle = $(".toggleMenu").attr("class"); //get 값을 가져오는
       if(toggle == "toggleMenu"){
       $(".toggleMenu").addClass("change");
+      //$("#myTopMenu").css("left",0)
+      //$("#myTopMenu").stop().animate({left:0});
+      $("#myTopMenu").stop().animate({top:0});
     }else{
       $(".toggleMenu").removeClass("change");
+      //$("#myTopMenu").css("left","-100%")
+      //$("#myTopMenu").stop().animate({left:"-100%"});
+      $("#myTopMenu").stop().animate({top:"-100%"});
     }
+    });
+
+    $(window).resize(function(){
+      $("#myTopMenu").removeAttr("style");
+      $(".toggleMenu").removeClass("change");
     });
 
     // const toggleMenu = document.getElementsByClassName("toggleMenu");
