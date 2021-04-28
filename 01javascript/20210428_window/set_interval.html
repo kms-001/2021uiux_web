@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>set Interval</title>
+</head>
+<body>
+  <div>
+    <span id="div" style="background:yellow">자동 회전하는 텍스트</span>
+  </div>
+  <button onclick="stop()">stop</button>
+  <script>
+    const div = document.getElementById("div");
+    //setInterval("doRotate()",300); 계속 돌아가는
+    let timeId = setInterval("doRotate()",300);
+
+    function stop(){
+    clearInterval(timeId);
+    }
+
+    function doRotate(){
+      // const 변하지 않는 데이터 / let 변하는 데이터
+      let str = div.innerHTML;
+      let firstChar = str.substr(0,1); // 자
+      let remains = str.substr(1,str.length-1); //동 회전하는 텍스트
+      str = remains + firstChar;
+      div.innerHTML = str
+    }
+    // doRotate();
+  </script>
+</body>
+</html>
