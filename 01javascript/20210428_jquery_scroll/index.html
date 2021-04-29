@@ -17,12 +17,19 @@
            background: pink; cursor:pointer}
   .nav li:hover {background: orange;}
   .nav.fixed {position:fixed; width: 100%; top:0;}
+  #car1 {position: absolute; top: 1300px; left: 0; opacity:0;}
+  #car1.move {left: 300px; transition: .3s; opacity: 1;}
+
+  #car2 {position: absolute; top:1500px; right: 0; opacity: 0;}
+  #car2.move {right: 300px; transition: .3s; opacity: 1;}
   </style>
   <script>
     $(document).ready(function(){
       //$(window).on("scroll",function(){});
 
       const menuPos = $(".nav").offset().top;
+      const car1Pos = $("#car1").offset().top;
+      const car2Pos = $("#car2").offset().top;
       $(".menuPos").html(menuPos + "px")
 
       $(window).scroll(function(){
@@ -36,6 +43,20 @@
 
         }else{
           $(".nav").removeClass("fixed");
+        }
+        // car1Pos가 scrollY 보다 값이 커졌을 때
+        // 1300에 자동차가 나오는데 +300을해서 1000일때 자동차가 나옴
+        // if(car1Pos - 300<scrollY) 와 같다.
+        if(car1Pos<scrollY + 300){
+          $("#car1").addClass("move");
+        }else{
+          $("#car1").removeClass("move");
+        }
+
+        if(car2Pos<scrollY + 300){
+          $("#car2").addClass("move");
+        }else{
+          $("#car2").removeClass("move");
         }
       });
     });
@@ -116,6 +137,7 @@
   <p>58</p>
   <p>59</p>
   <p>60</p>
+  <img src="../../images/car.png" alt="자동차" id="car1">
   <p>61</p>
   <p>62</p>
   <p>63</p>
@@ -126,6 +148,7 @@
   <p>68</p>
   <p>69</p>
   <p>70</p>
+  <img src="../../images/car.png" alt="자동차2" id="car2">
   <p>71</p>
   <p>72</p>
   <p>73</p>

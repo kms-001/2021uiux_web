@@ -17,7 +17,10 @@
     // console.log(timeView);
     // time.innerHTML = timeView;
     function sTime(){
+      if(myTime == 0){
       myTime = setInterval("timer()",1000);
+      }
+      console.log(myTime);
     }
 
     function timer(){
@@ -27,8 +30,10 @@
     }
     timer();
     sTime();
+
     function eTime(){
       clearInterval(myTime);
+      myTime = 0
     }
   </script>
 </body>
