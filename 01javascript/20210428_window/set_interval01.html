@@ -8,13 +8,17 @@
 </head>
 <body>
   <p id="time"></p>
+  <button onclick="eTime()">STOP</button>
+  <button onclick="sTime()">START</button>
   <script>
     const time = document.getElementById("time"); // $("#time")
 
+      let myTime = 0;
     // console.log(timeView);
     // time.innerHTML = timeView;
-
-    setInterval("timer()",1000);
+    function sTime(){
+      myTime = setInterval("timer()",1000);
+    }
 
     function timer(){
       let date = new Date();
@@ -22,6 +26,10 @@
       time.innerHTML = timeView;
     }
     timer();
+    sTime();
+    function eTime(){
+      clearInterval(myTime);
+    }
   </script>
 </body>
 </html>
