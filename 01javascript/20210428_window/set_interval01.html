@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>time</title>
+</head>
+<body>
+  <p id="time"></p>
+  <script>
+    const time = document.getElementById("time"); // $("#time")
+
+    // console.log(timeView);
+    // time.innerHTML = timeView;
+
+    setInterval("timer()",1000);
+
+    function timer(){
+      let date = new Date();
+      let timeView = date.toLocaleTimeString();
+      time.innerHTML = timeView;
+    }
+    timer();
+  </script>
+</body>
+</html>
