@@ -11,17 +11,28 @@
   .box1{position: fixed;width: 200px;height: 100px;
         top: 100px;right: 100px;background: skyblue;
         padding: 10px;}
-  .nav {}
+  .nav {height: 50px; transition:.3s}
   .nav li {float: left; width: 20%;
            text-align: center; line-height: 40px;
            background: pink; cursor:pointer}
   .nav li:hover {background: orange;}
-  .nav.fixed {position:fixed; width: 100%; top:0;}
+  .nav.fixed {position:fixed; width: 100%; top:0; height: 40px;}
+
   #car1 {position: absolute; top: 1300px; left: 0; opacity:0;}
   #car1.move {left: 300px; transition: .3s; opacity: 1;}
 
   #car2 {position: absolute; top:1500px; right: 0; opacity: 0;}
   #car2.move {right: 300px; transition: .3s; opacity: 1;}
+
+  .top{position: fixed; width: 100px; height: 100px;
+       background: pink; right: 50px; bottom: 50px;
+       border-radius: 50px; display: flex; justify-content: center;
+       align-items: center; cursor:pointer; transition:.3s;
+       animation:viewTop 1s infinite alternate; opacity: 0;}
+  .top.view{opacity: 1;}
+  @keyframes viewTop {
+    to{transform:translateY(-20px)}
+  }
   </style>
   <script>
     $(document).ready(function(){
@@ -30,6 +41,7 @@
       const menuPos = $(".nav").offset().top;
       const car1Pos = $("#car1").offset().top;
       const car2Pos = $("#car2").offset().top;
+      const topPos = $(".top").offset().top;
       $(".menuPos").html(menuPos + "px")
 
       $(window).scroll(function(){
@@ -52,12 +64,22 @@
         }else{
           $("#car1").removeClass("move");
         }
-
+        // if(scrollY>car2Pos - 300)
         if(car2Pos<scrollY + 300){
           $("#car2").addClass("move");
         }else{
           $("#car2").removeClass("move");
         }
+
+        //if(topPos<scrollY + window.innerHeight/2)
+        if(scrollY > topPos - 500){
+          $(".top").addClass("view");
+        }else{
+          $(".top").removeClass("move");
+        }
+      }); // scroll
+      $(".top").click(function(){
+        $("html,body").animate({scrollTop:0},1000);
       });
     });
   </script>
@@ -179,6 +201,6 @@
   <p>98</p>
   <p>99</p>
   <p>100</p>
-
+  <div class="top">TOP</div>
 </body>
 </html>
