@@ -18,7 +18,36 @@
           left: 50px; top: 190px;}
     .car {position: absolute;
           left: 50px; top: 120px;}
+    .car.rotate{transform:rotateY(180deg)}
   </style>
+  <script>
+    $(document).ready(function(){
+      const bar = $(".bar");
+      const car = $(".car");
+      let nStart = car.position().left;
+      let nEnd = nStart + bar.width() - car.width();
+      let nCurrent = nStart; // 0 nStart
+      let nStep = 2; // 2만큼 이동하겠다는 의미
+
+
+      function carMove(){
+        nCurrent += nStep; //nCurrent = nCurrent + nStep;
+        console.log(nCurrent);
+
+        if(nCurrent > nEnd){
+          nStep = -2;
+          car.addClass("rotate");
+        }
+        if(nCurrent < nStart){
+          nStep = 2;
+          car.removeClass("rotate");
+        }
+        car.css("left",nCurrent)
+      }
+      setInterval(carMove,30);
+    });
+
+  </script>
 </head>
 <body>
   <div id="panel">
