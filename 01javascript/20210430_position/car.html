@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <style>
+    #panel {width: 600px; height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            position: relative;}
+    .bar {width: 500px; height: 20px;
+          background: orange;
+          position: absolute;
+          left: 50px; top: 190px;}
+    .car {position: absolute;
+          left: 50px; top: 120px;}
+  </style>
+</head>
+<body>
+  <div id="panel">
+    <div class="bar"></div>
+    <div class="car">
+      <img src="../../images/car.png" alt="">
+    </div>
+  </div>
+  <button class="btnStart">start</button>
+  <button class="btnStop">stop</button>
+</body>
+</html>
