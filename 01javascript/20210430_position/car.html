@@ -28,7 +28,7 @@
       let nEnd = nStart + bar.width() - car.width();
       let nCurrent = nStart; // 0 nStart
       let nStep = 2; // 2만큼 이동하겠다는 의미
-
+      let carMove1 = 0;
 
       function carMove(){
         nCurrent += nStep; //nCurrent = nCurrent + nStep;
@@ -43,9 +43,20 @@
           car.removeClass("rotate");
         }
         car.css("left",nCurrent)
+
       }
-      setInterval(carMove,30);
-    });
+      //setInterval(carMove,30);
+      $(".btnStart").click(function(){
+        if(carMove1 == 0){
+        carMove1 = setInterval(carMove,30);
+        }
+      });
+      $(".btnStop").click(function(){
+        clearInterval(carMove1);
+        carMove1 = 0;
+      });
+
+      });
 
   </script>
 </head>

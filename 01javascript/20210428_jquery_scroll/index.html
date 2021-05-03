@@ -42,17 +42,16 @@
       const car1Pos = $("#car1").offset().top;
       const car2Pos = $("#car2").offset().top;
       const topPos = $(".top").offset().top;
-      $(".menuPos").html(menuPos + "px")
+      $(".menuPos").html(menuPos + "px");
 
       $(window).scroll(function(){
         //let scrollY = window.pageYoffset;\
         let scrollY = $(window).scrollTop();
         console.log(scrollY);
-        $(".scrollY").html(scrollY + "px")
+        $(".scrollY").html(scrollY + "px");
 
         if(menuPos<scrollY){
           $(".nav").addClass("fixed");
-
         }else{
           $(".nav").removeClass("fixed");
         }
@@ -65,10 +64,10 @@
           $("#car1").removeClass("move");
         }
         // if(scrollY>car2Pos - 300)
-        if(car2Pos<scrollY + 300){
-          $("#car2").addClass("move");
+        if(car1Pos < scrollY + 300){
+          $("#car1").addClass("move");
         }else{
-          $("#car2").removeClass("move");
+          $("#car1").removeClass("move");
         }
 
         //if(topPos<scrollY + window.innerHeight/2)
@@ -77,7 +76,7 @@
         }else{
           $(".top").removeClass("view");
         }
-      }); // scroll
+      }); //scroll
       $(".top").click(function(){
         $("html,body").animate({scrollTop:0},1000);
       });
