@@ -15,6 +15,7 @@ $(document).ready(function(){
     //   $("html,body").animate({scrollTop:oneThree})
     // });
 
+
     //2st for문
     // for(let i=0;i< $(".menu>a").length;i++){
     //   $(".menu>a").eq(i).click(function(){
@@ -30,6 +31,7 @@ $(document).ready(function(){
     //   const st = $(".scene").eq(i).offset().top
     //   $("html,body").animate({scrollTop:st});
     // });
+
 
     // 4st hash
     $(".menu>a").click(function(){
