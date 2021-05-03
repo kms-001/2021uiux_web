@@ -40,4 +40,21 @@ $(document).ready(function(){
       const st = target.offset().top;
       $("html,body").animate({scrollTop:st})
     });
+
+
+
+    $(window).scroll(function(){
+      let scrollY = $(window).scrollTop();
+
+      if(scrollY >= $(".scene").eq(0).offset().top){
+        $(".menu>a").removeClass("active").eq(0).addClass("active");
+      }
+      if(scrollY >= $(".scene").eq(1).offset().top){
+        $(".menu>a").removeClass("active").eq(1).addClass("active");
+      }
+      if(scrollY >= $(".scene").eq(2).offset().top){
+        $(".menu>a").removeClass("active").eq(2).addClass("active");
+      }
+    });
+
 });
