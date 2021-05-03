@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  // 1menu
+  // 1st
   // const oneTop = $("#v01s").offset().top;
   // const oneTwo = $("#v02s").offset().top;
   // const oneThree = $("#v03s").offset().top;
@@ -15,14 +15,27 @@ $(document).ready(function(){
     //   $("html,body").animate({scrollTop:oneThree})
     // });
 
-    // for문
-    for(let i=0;i< $(".menu>a").length;i++){
-      $(".menu>a").eq(i).click(function(){
-        $("html,body").animate({scrollTop:$(".scene").eq(i).offset().top;})
-      });
-    }
+    //2st for문
+    // for(let i=0;i< $(".menu>a").length;i++){
+    //   $(".menu>a").eq(i).click(function(){
+    //     $("html,body").animate({scrollTop:$(".scene").eq(i).offset().top;})
+    //   });
+    // }
 
+
+    //3st
+    // $(this).index()
+    // $(".menu>a").click(function(){
+    //   let i = $(this).index();
+    //   const st = $(".scene").eq(i).offset().top
+    //   $("html,body").animate({scrollTop:st});
+    // });
+
+    // 4st hash
     $(".menu>a").click(function(){
-      
+      let target = $(this.hash);
+      //console.log(target);
+      const st = target.offset().top;
+      $("html,body").animate({scrollTop:st})
     });
 });
