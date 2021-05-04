@@ -34,27 +34,42 @@ $(document).ready(function(){
 
 
     // 4st hash
-    $(".menu>a").click(function(){
-      let target = $(this.hash);
-      //console.log(target);
-      const st = target.offset().top;
-      $("html,body").animate({scrollTop:st})
-    });
+    // $(".menu>a").click(function(){
+    //   let target = $(this.hash);
+    //   //console.log(target);
+    //   const st = target.offset().top;
+    //   $("html,body").animate({scrollTop:st})
+    // });
 
 
 
     $(window).scroll(function(){
       let scrollY = $(window).scrollTop();
+      // 5st
+      // if(scrollY >= $(".scene").eq(0).offset().top){
+      //   $(".menu>a").removeClass("active").eq(0).addClass("active");
+      // }
+      // if(scrollY >= $(".scene").eq(1).offset().top){
+      //   $(".menu>a").removeClass("active").eq(1).addClass("active");
+      // }
+      // if(scrollY >= $(".scene").eq(2).offset().top){
+      //   $(".menu>a").removeClass("active").eq(2).addClass("active");
+      // }
 
-      if(scrollY >= $(".scene").eq(0).offset().top){
-        $(".menu>a").removeClass("active").eq(0).addClass("active");
-      }
-      if(scrollY >= $(".scene").eq(1).offset().top){
-        $(".menu>a").removeClass("active").eq(1).addClass("active");
-      }
-      if(scrollY >= $(".scene").eq(2).offset().top){
-        $(".menu>a").removeClass("active").eq(2).addClass("active");
-      }
-    });
+      // for문
+      // for(let i=0;i<$(".scene").length;i++){
+      //   if(scrollY >= $(".scene").eq(i).offset().top){
+      //     $(".menu>a").removeClass("active").eq(i).addClass("active");
+      //   }
+      // }
 
-});
+      // each
+      $(".scene").each(function(index){
+        // if(scrollY >= $(".scene").eq(index).offset().top){}
+        if(scrollY >= $(this).offset().top){
+          $(".menu>a").removeClass("active").eq(index).addClass("active");
+        }
+      });
+
+  }); // scrolly
+}); // jquery ready
