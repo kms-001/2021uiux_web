@@ -16,6 +16,13 @@
     .wrapper li:nth-child(1){left:0;}
     .wrapper span{cursor:pointer}
   </style>
+  <!-- 만드는 순서
+      1) html / style 작성
+      2) next 제작 console.log() 변수 현재위치0 - 다음위치1 / 현재위치1 - 다음위치2
+      3) 이미지 에니메이션 작성
+      4) prev 제작
+      5) 이중클릭방지 overBtn = false 구현
+      6) setInterval() / trigger()직상 -->
   <script>
     $(document).ready(function(){
       let current = 0;
