@@ -6,34 +6,56 @@ li{list-style: none;}
 .clearfix:after{content: ""; display: block; clear: both;}
 
 /* header */
-header {display: flex;
-        justify-content: center;
-        height: 100px;}
-.container {width: 1000px;
-            display: flex;
-            justify-content: space-between;}
-.container .logo {display: flex;
-                 align-items: center}
-.menu {display: flex;
-       align-items: center;}
-.menu ul {display: flex;}
-.menu ul a {display: block; padding: 15px;}
-.menu ul a:hover {background: #bf262e; color:#fff}
-.mobile_menu {display: none; background: skyblue;
-              width: 30px; height: 30px;}
+  header {display: flex;
+          justify-content: center;
+          height: 100px;}
+  .container {width: 1000px;
+              display: flex;
+              justify-content: space-between;}
+  .container .logo {display: flex;
+                   align-items: center}
+  .menu {display: flex;
+         align-items: center;}
+  .menu ul {display: flex;}
+  .menu ul a {display: block; padding: 15px;}
+  .menu ul a:hover {background: #bf262e; color:#fff}
+  .mobile_menu {display: none;
+                width: 30px; height: 30px;
+                cursor: pointer;}
 
 /* banner */
-#banner {background-image: url(../images/banner/tony-stark-poster.jpg);
-         background-position: center; background-size: cover;
-         height: 600px; display: flex; justify-content: center;}
-.banner_txt {display: flex;
-             flex-direction: column;
-             flex:1;
-             align-items: flex-end;
-             justify-content: center;
-             color:#fff}
-.banner_txt h2 {font-size: 2.5rem; width: 400px; text-align: left;}
-.banner_txt p {font-size: 1.3rem; width: 400px; text-align: left;}
+  #banner {background-image: url(../images/banner/tony-stark-poster.jpg);
+           background-position: center; background-size: cover;
+           height: 600px; display: flex; justify-content: center;}
+  .banner_txt {display: flex;
+               flex-direction: column;
+               flex:1;
+               align-items: flex-end;
+               justify-content: center;
+               color:#fff}
+  .banner_txt h2 {font-size: 2.5rem;
+                  width: 400px; text-align: left;}
+  .banner_txt p {font-size: 1.3rem;
+                 width: 400px; text-align: left;}
+  .column{flex-direction: column;}
+
+/* banner option */
+  .banner_option {display: flex;}
+  .banner_option>div {flex:1;
+                      background: #bf262e;
+                      color:#fff;
+                      padding: 15px;}
+  .banner_option a {font-size:1.1rem;}
+  .banner_option a:hover {border-bottom: 1px solid #fff}
+  .banner_title {font-weight: bold;
+                 font-size: 1.2rem;
+                 margin-bottom: 10px;}
+
+/* general */
+#general {display: flex;
+          justify-content: center;}
+#general section {flex:2; background: skyblue;}
+#general aside {flex:1; background: pink;}
 
 
 @media screen and (max-width:700px) {
@@ -42,6 +64,18 @@ header {display: flex;
   .container .logo img {width: 100%;}
   .menu {padding-right: 16px;}
   .menu ul {display: none;}
-  .mobile_menu {display: block;}
+  .mobile_menu {display: flex;
+                flex-direction: column;
+                justify-content: space-around;}
+  .mobile_menu_line {height: 4px; background: #000;
+                    border-radius: 2px;}
   .banner_txt {align-items: center;}
+
+/* banner option */
+  .banner_option {flex-direction: column}
+  .banner_option a {display: none;}
+  .banner_option>div {padding: 20px; padding-bottom: 0;}
+  .banner_option>div:last-child {padding-bottom: 20px;}
+
+  #container {flex-direction: column;}
 }
