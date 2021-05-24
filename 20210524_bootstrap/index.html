@@ -10,7 +10,14 @@
 
     <title>Hello, world!</title>
     <style>
-      .wrap {background: orange;}
+      :root{
+        --blue:#19f;
+        --white:#fff;
+        --colorlst:#cdcdcd;
+      }
+
+
+      .wrap {background: var(--blue)}
       .skyblue{background: skyblue;}
       .yellow {background: yellow;}
       .pink {background: pink;}
@@ -39,16 +46,66 @@
     </div>
 
 
-    <div class="container px-0 skyblue">
+    <div class="container px-0 bg-light mb-5">
       <div class="row">
         <div class="col">
           <button class="btn btn-primary">button</button>
           <div class="btn btn-secondary">button</div>
-          <a href="#" class="btn btn-success">button</a>
+          <a href="#" class="btn btn-outline-success">button</a>
           <div class="btn btn-warning">button</div>
         </div>
       </div>
     </div>
+
+    <div class="container mb-5">
+      <div class="row">
+        <div class="btn-group">
+          <button class="btn btn-primary">apple</button>
+
+          <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">samsung</button>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">tablet</a>
+              <a href="#" class="dropdown-item">smartphone</a>
+            </div>
+          </div>
+
+          <button class="btn btn-primary">sony</button>
+          <button class="btn btn-primary">LG</button>
+          <button class="btn btn-primary">SK</button>
+        </div>
+      </div>
+    </div>
+
+<div class="bg-warning">
+  <div class="container"> <!-- 1140 -->
+      <nav class="navbar navbar-expand-md bg-warning navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">LOGO</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="toggleMenu">
+          <ul class="navbar-nav ml-0 ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+</div>
+    <!-- dropdown-toggle / deta-toggle="dropdown" -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
