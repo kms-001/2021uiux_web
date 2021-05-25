@@ -7,13 +7,16 @@ if (G5_IS_MOBILE) {
 }
 ?>
 
+</div>
+<? if(!defined('_INDEX_')) {?>
+<div id="aside">
+  <? include_once(G5_THEME_PATH.'/skin/nav/mysubmenu.php');?>
+</div>
+<?}?>
+</div>
 
+</div>
 <!-- } 콘텐츠 끝 -->
-
-
-
-<!-- 하단 시작 { -->
-
       <footer>
           <div class="footerWrap">
               <div class="footerLogo">
