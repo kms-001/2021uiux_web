@@ -10,18 +10,15 @@ if (G5_IS_MOBILE) {
 
 <!-- } 콘텐츠 끝 -->
 
-<hr>
+
 
 <!-- 하단 시작 { -->
-<div id="ft">
 
-    <div id="ft_wr">
       <footer>
-        <hr style="width:100%">
-          <div class="footerWrap clearfix">
+          <div class="footerWrap">
               <div class="footerLogo">
                   <a href="index.html">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="img/logo.png" alt="">
                   </a>
               </div>
               <div class="footerTxt">
@@ -40,24 +37,25 @@ if (G5_IS_MOBILE) {
               </div> <!-- footerTxt -->
          </div> <!-- footerWrap -->
       </footer>
-
+  <? if(defined('_INDEX_')) {?>
         <div class="top view">TOP</div>
-        <?php
-        //공지사항
-        // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
-        // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
-        // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-        echo latest('theme/notice', 'notice', 4, 13);
-        ?>
+      <script>
+        const topPos = $(".top").offset().top;
+        $(window).scroll(function(){
+          let scrollY = $(window).scrollTop();
+          if(scrollY > $(window).innerHeight()/2){
+            $(".top").addClass("view");
+          }else{
+            $(".top").removeClass("view");
+          }
+        });
 
-		<?php echo visit('theme/basic'); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-	</div>
-        <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
+        $(".top").click(function(){
+          $("html,body").animate({scrollTop:0},1000);
+        });
+      </script>
+              <?} ?>
 
-
-
-</div>
 
 <?php
 if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) { ?>

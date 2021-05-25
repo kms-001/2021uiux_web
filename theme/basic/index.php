@@ -169,7 +169,7 @@ include_once(G5_THEME_PATH.'/head.php');
                 <p>화창한 봄 날씨에<br>
                 집중력이 흐트러질 때면<br>
                 더블샷 에스프레소&크림으로
-                <br>Recharge 해요!
+                <br>Recharge 해요!<br>
                 여러분의 시험공부<br>
                 Recharge 아이템은</p>
                 <img src="img/Path.png" alt="heart">
@@ -178,6 +178,29 @@ include_once(G5_THEME_PATH.'/head.php');
     </ul>
 </div> <!-- section2 -->
 
+
+    <div class="section3">
+        <ul class="clearfix" >
+            <li class="box1 wow fadeInLeft" data-wow-delay=".4s" style="visibility: visible; animation-delay: .4s; animation-name: fadeInLeft;">
+                <img src="img/box01.png" alt="icon">
+                <h3 class="mb20">Dongsuh History</h3>
+                <p class="mb30">식품문화를 꽃피워온<br>
+                동서식품의 지난 발자취</p>
+                <div class="boxBtn">
+                    <a href="">자세히보기</a>
+                </div>
+            </li>
+            <li class="box2 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: .4s; animation-name: fadeInRight;">
+                <img src="img/box02.png" alt="icon">
+                <h3 class="mb20">Food Safety</h3>
+                <p class="mb30">안전한 식품이야기<br>
+                동서식품의 안전센터</p>
+                <div class="boxBtn">
+                    <a href="">자세히보기</a>
+                </div>
+            </li>
+        </ul>
+    </div> <!-- section3 -->
 
 
 

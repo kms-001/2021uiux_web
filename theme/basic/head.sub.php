@@ -73,22 +73,19 @@ add_javascript('<script src="'.G5_JS_URL.'/common.js?ver='.G5_JS_VER.'"></script
 add_javascript('<script src="'.G5_JS_URL.'/wrest.js?ver='.G5_JS_VER.'"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/placeholders.min.js"></script>', 0);
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/font-awesome/css/font-awesome.min.css">', 0);
+add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
+add_javascript('<script src="'.G5_THEME_JS_URL.'/wow.js"></script>', 10);
+add_javascript('<script src="'.G5_JS_URL.'/js/jquery.colorbox-min.js"></script>', 10);
+add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/css/colorbox.css">', 0);
 
 if(G5_IS_MOBILE) {
-    add_javascript('<script src="'.G5_JS_URL.'/modernizr.custom.70111.js"></script>', 1); // overflow scroll 감지
+
+add_javascript('<script src="'.G5_JS_URL.'/modernizr.custom.70111.js"></script>', 1); // overflow scroll 감지
 }
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+<link rel="stylesheet" href="<? echo G5_THEME_CSS_URL?>/animate.css">
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php
-if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
-    $sr_admin_msg = '';
-    if ($is_admin == 'super') $sr_admin_msg = "최고관리자 ";
-    else if ($is_admin == 'group') $sr_admin_msg = "그룹관리자 ";
-    else if ($is_admin == 'board') $sr_admin_msg = "게시판관리자 ";
-
-    echo '<div id="hd_login_msg">'.$sr_admin_msg.get_text($member['mb_nick']).'님 로그인 중 ';
-    echo '<a href="'.G5_BBS_URL.'/logout.php">로그아웃</a></div>';
-}

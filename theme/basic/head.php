@@ -15,55 +15,105 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
+
 <!-- 상단 시작 { -->
+<script>
+  new WOW().init();
+</script>
 
-    <header>
-      <div id="hd_wrapper">
-        <div id="header" class="clearfix">
-        <div id="logo">
-            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/logo.png" alt="<?php echo $config['cf_title']; ?>"></a>
+        <nav id="gnb">
+        <h2>메인메뉴</h2>
+        <div class="gnb_wrap">
+            <ul id="gnb_1dul">
+                <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                <?php
+				$menu_datas = get_menu_db(0, true);
+				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
+                $i = 0;
+                foreach( $menu_datas as $row ){
+                    if( empty($row) ) continue;
+                    $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
+                ?>
+                <li class="gnb_1dli <?php echo $add_class; ?>" style="z-index:<?php echo $gnb_zindex--; ?>">
+                    <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
+                    <?php
+                    $k = 0;
+                    foreach( (array) $row['sub'] as $row2 ){
+
+                        if( empty($row2) ) continue;
+
+                        if($k == 0)
+                            echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
+                    ?>
+                        <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
+                    <?php
+                    $k++;
+                    }   //end foreach $row2
+
+                    if($k > 0)
+                        echo '</ul></div>'.PHP_EOL;
+                    ?>
+                </li>
+                <?php
+                $i++;
+                }   //end foreach $row
+
+                if ($i == 0) {  ?>
+                    <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
+                <?php } ?>
+            </ul>
+            <div id="gnb_all">
+                <h2>전체메뉴</h2>
+                <ul class="gnb_al_ul">
+                    <?php
+
+                    $i = 0;
+                    foreach( $menu_datas as $row ){
+                    ?>
+                    <li class="gnb_al_li">
+                        <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_al_a"><?php echo $row['me_name'] ?></a>
+                        <?php
+                        $k = 0;
+                        foreach( (array) $row['sub'] as $row2 ){
+                            if($k == 0)
+                                echo '<ul>'.PHP_EOL;
+                        ?>
+                            <li><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
+                        <?php
+                        $k++;
+                        }   //end foreach $row2
+
+                        if($k > 0)
+                            echo '</ul>'.PHP_EOL;
+                        ?>
+                    </li>
+                    <?php
+                    $i++;
+                    }   //end foreach $row
+
+                    if ($i == 0) {  ?>
+                        <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
+                    <?php } ?>
+                </ul>
+                <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div id="gnb_all_bg"></div>
         </div>
+    </nav>
+    <script>
 
-        <nav id="main_menu">
-        <ul class="clearfix">
-            <li class="main_txt"><a href="company.html">회사소개</a>
-              <ul class="sub_menu">
-                  <li><a href="company.html?ms=0">동서식품 소개</a></li>
-                  <li><a href="company.html?ms=1">부문역량</a></li>
-                  <li><a href="company.html?ms=2">오시는길</a></li>
-              </ul>
-            </li>
-            <li class="main_txt"><a href="brand.html">제품안내</a>
-              <ul class="sub_menu">
-                  <li><a href="brand.html?ms=0">브랜드</a></li>
-                  <li><a href="brand.html?ms=1">제품소개</a></li>
-              </ul>
-            </li>
-            <li class="main_txt"><a href="promotion.html">홍보센터</a>
-              <ul class="sub_menu">
-                  <li><a href="promotion.html?ms=0">뉴스</a></li>
-                  <li><a href="promotion.html?ms=1">웹진삶의향기</a></li>
-                  <li><a href="promotion.html?ms=2">커피클래스</a></li>
-              </ul>
-            </li>
-            <li class="main_txt"><a href="society.html">사회공헌</a>
-              <ul class="sub_menu">
-                  <li><a href="society.html?ms=0">동서문학상</a></li>
-                  <li><a href="society.html?ms=1">사랑의향기</a></li>
-                  <li><a href="society.html?ms=2">꿈의도서관</a></li>
-              </ul>
-            </li>
-            <li class="main_txt"><a href="cs.html">고객의소리</a>
-              <ul class="sub_menu">
-                  <li><a href="cs.html?ms=0">FAQ</a></li>
-                  <li><a href="cs.html?ms=1">일반문의</a></li>
-                  <li><a href="cs.html?ms=2">불편사항</a></li>
-              </ul>
-            </li>
-        </ul>
-      </nav>
-      </div>
-    </div>
+    $(function(){
+        $(".gnb_menu_btn").click(function(){
+            $("#gnb_all, #gnb_all_bg").show();
+        });
+        $(".gnb_close_btn, #gnb_all_bg").click(function(){
+            $("#gnb_all, #gnb_all_bg").hide();
+        });
+    });
+
+    </script>
+
+
     <? if(defined('_INDEX_')) {?>
     <div class="sliderWrap">
     <ul class="slider clearfix">
@@ -87,7 +137,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
          pager:false,
          controls:false
         });
-       });
+      });
     </script>
       <?} ?>
     </header>
