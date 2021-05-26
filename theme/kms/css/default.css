@@ -465,8 +465,8 @@ box-sizing:content-box;
 
 
 /* subVisual */
-.subVisual {height: 460px; background: pink;}
-.subVisual #page_title {height: 100%; display: flex;
+.subVisual {height: 250px; background: pink;}
+.subVisual #page_title {height: 250px; display: flex;
                         justify-content: center;
                         align-items: center;
                         background-position: center;
