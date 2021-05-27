@@ -13,18 +13,18 @@ include_once(G5_THEME_PATH.'/head.php');
 <div class="content">
     <ul class="contList clearfix">
         <li class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: .2s; animation-name: fadeInUp;">
-            <a href="company.html"><img src="img/icon01.png" alt="icon01">
+            <a href="http://ms00.dothome.co.kr/main/bbs/content.php?co_id=company"><img src="<?php echo G5_THEME_IMG_URL?>/icon01.png" alt="icon01">
                 <p>회사소개</p>
             </a>
         </li>
         <li  class="wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: .4s; animation-name: fadeInUp;">
-            <a href="promotion.html"><img src="img/icon02.png" alt="icon02">
+            <a href="http://ms00.dothome.co.kr/main/bbs/board.php?bo_table=promotion01"><img src="<?php echo G5_THEME_IMG_URL?>/icon02.png" alt="icon02">
                 <p>뉴스</p>
             </a>
         </li>
         <li  class="wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: .6s; animation-name: fadeInUp;">
           <a href="https://www.youtube.com/embed/9zg8NXMo5zw" class="youtube" title="영상">
-            <img src="img/banner_btn.png" alt="">
+            <img src="<?php echo G5_THEME_IMG_URL?>/banner_btn.png" alt="">
           </a>
           <div class="titleTxt">
           <h2>/ RECIPE</h2>
@@ -35,22 +35,22 @@ include_once(G5_THEME_PATH.'/head.php');
           <p>도심 속 정원, 숲 속 커피 공장 맥심 브랜드 플래그쉽 스토어</p>
         </div></li>
         <li class="wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
-            <a href="promotion.html?ms=2"><img src="img/icon03.png" alt="icon03">
+            <a href="http://ms00.dothome.co.kr/main/bbs/board.php?bo_table=promotion03"><img src="<?php echo G5_THEME_IMG_URL?>/icon03.png" alt="icon03">
                 <p>커피클래스</p>
             </a>
         </li>
         <li class="wow fadeInUp" data-wow-delay="1.2s" style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
-            <a href="promotion.html?ms=1"><img src="img/icon04.png" alt="icon04">
+            <a href="http://ms00.dothome.co.kr/main/bbs/board.php?bo_table=promotion02"><img src="<?php echo G5_THEME_IMG_URL?>/icon04.png" alt="icon04">
                 <p>웹진</p>
             </a>
         </li>
         <li class="wow fadeInUp" data-wow-delay="1.4s" style="visibility: visible; animation-delay: 1.4s; animation-name: fadeInUp;">
-            <a href="society.html"><img src="img/icon05.png" alt="icon05">
+            <a href="http://ms00.dothome.co.kr/main/bbs/content.php?co_id=society"><img src="<?php echo G5_THEME_IMG_URL?>/icon05.png" alt="icon05">
                 <p>사회공헌</p>
             </a>
         </li>
         <li class="wow fadeInUp" data-wow-delay="1.6s" style="visibility: visible; animation-delay: 1.6s; animation-name: fadeInUp;">
-            <a href="company.html?ms=1"><img src="img/icon06.png" alt="icon06">
+            <a href="http://ms00.dothome.co.kr/main/bbs/content.php?co_id=company02"><img src="<?php echo G5_THEME_IMG_URL?>/icon06.png" alt="icon06">
                 <p>연혁</p>
             </a>
         </li>
@@ -62,13 +62,13 @@ include_once(G5_THEME_PATH.'/head.php');
 </div> <!-- .content -->
 
 <div class="containerWrap">   <!-- 100% -->
-    <div class="section">  <!-- 1240 -->
+    <div class="section1">  <!-- 1240 -->
         <h3>비전</h3>
         <p>VISION 2021</p>
         <ul class="clearfix">
             <li>
                 <div class="card">
-                    <img src="img/vicon01.png" alt="화이트" class="img1">
+                    <img src="<?php echo G5_THEME_IMG_URL?>/vicon01.png" alt="화이트" class="img1">
                     <div class="card_body">
                         <h3>연구개발</h3>
                         <p>더 나은 제품을 위한<br> 연구원들의 손길이<br>멈추지 않고 있습니다.</p>
@@ -78,7 +78,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
             <li>
                 <div class="card">
-                    <img src="img/vicon02.png" alt="화이트" class="img1">
+                    <img src="<?php echo G5_THEME_IMG_URL?>/vicon02.png" alt="화이트" class="img1">
                     <div class="card_body">
                         <h3>최신설비</h3>
                         <p>축적된 기술 노하우와<br>최첨단 생산관리 자동화<br> 시스템을 완비하고 있습니다.</p>
@@ -88,7 +88,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
             <li>
                 <div class="card">
-                    <img src="img/vicon03.png" alt="화이트" class="img1">
+                    <img src="<?php echo G5_THEME_IMG_URL?>/vicon03.png" alt="화이트" class="img1">
                     <div class="card_body">
                         <h3>유통</h3>
                         <p>물류 체계 개선으로<br>신속·정확·안전하게<br>제품을 전달합니다.</p>
@@ -98,7 +98,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
             <li>
                 <div class="card">
-                    <img src="img/vicon04.png" alt="화이트" class="img1">
+                    <img src="<?php echo G5_THEME_IMG_URL?>/vicon04.png" alt="화이트" class="img1">
                     <div class="card_body">
                         <h3>환경보존</h3>
                         <p>청정연료 대체,<br>공정 개선 등을 통해 <br>대기오염을 줄이고 있습니다.</p>
@@ -112,7 +112,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <div class="section2">
     <ul class="snsList clearfix">
             <li><a href="#">
-                <img src="img/snsicon.png" alt="facebook" class="faceimg">
+                <img src="<?php echo G5_THEME_IMG_URL?>/snsicon.png" alt="facebook" class="faceimg">
             <div class="mainTxt">
                 <h1 class="mb10">facebook</h1>
                 <p class="mb10">세상의 모든 순간이<br>더욱 행복해지도록</p>
@@ -121,7 +121,7 @@ include_once(G5_THEME_PATH.'/head.php');
             </div>
             </a></li>
         <li><a href="#">
-            <img src="img/sns01.png" alt="">
+            <img src="<?php echo G5_THEME_IMG_URL?>/sns01.png" alt="">
         </a></li>
         <li class="boxBottom"><a href="#">
             <div class="snsTxt">
@@ -133,11 +133,11 @@ include_once(G5_THEME_PATH.'/head.php');
                 카누 싱글 오리진과<br>
                 링 핸들 텀블러로<br>
                 분위기 UP!</p>
-                <img src="img/Path.png" alt="heart">
+                <img src="<?php echo G5_THEME_IMG_URL?>/Path.png" alt="heart">
             </div>
         </a></li>
         <li><a href="#">
-            <img src="img/sns02.png" alt="">
+            <img src="<?php echo G5_THEME_IMG_URL?>/sns02.png" alt="">
         </a></li>
         <li class="boxTop"><a href="#">
             <div class="snsTxt">
@@ -149,12 +149,12 @@ include_once(G5_THEME_PATH.'/head.php');
                 저의 최애 집콕 필수템은<br>
                 고소함 충전 <br>
                 아몬드 후레이크 ♥</p>
-                <img src="img/Path.png" alt="heart">
+                <img src="<?php echo G5_THEME_IMG_URL?>/Path.png" alt="heart">
 
             </div>
         </a></li>
         <li><a href="#">
-            <img src="img/sns03.png" alt="">
+            <img src="<?php echo G5_THEME_IMG_URL?>/sns03.png" alt="">
         </a></li>
         <li class="boxTop"><a href="#">
             <div class="snsTxt">
@@ -166,16 +166,27 @@ include_once(G5_THEME_PATH.'/head.php');
                 <br>Recharge 해요!<br>
                 여러분의 시험공부<br>
                 Recharge 아이템은</p>
-                <img src="img/Path.png" alt="heart">
+                <img src="<?php echo G5_THEME_IMG_URL?>/Path.png" alt="heart">
             </div>
         </a></li>
     </ul>
 </div> <!-- section2 -->
 
+<div class="latest_wr">
+  <!-- 사진 최신글2 { -->
+  <?php
+  // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
+  // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
+  // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
+  echo latest('theme/news', 'promotion01', 4, 30);		// 최소설치시 자동생성되는 갤러리게시판
+  ?>
+  <!-- } 사진 최신글2 끝 -->
+</div>
+
 <div class="section3">
     <ul class="clearfix" >
-        <li class="box1 wow fadeInLeft" data-wow-delay=".4s" style="visibility: visible; animation-delay: .4s; animation-name: fadeInLeft;">
-            <img src="img/box01.png" alt="icon">
+        <li class="box1 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: .4s; animation-name: fadeInRight;">
+            <img src="<?php echo G5_THEME_IMG_URL?>/box01.png" alt="icon">
             <h3 class="mb20">Dongsuh History</h3>
             <p class="mb30">식품문화를 꽃피워온<br>
             동서식품의 지난 발자취</p>
@@ -184,7 +195,7 @@ include_once(G5_THEME_PATH.'/head.php');
             </div>
         </li>
         <li class="box2 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: .4s; animation-name: fadeInRight;">
-            <img src="img/box02.png" alt="icon">
+            <img src="<?php echo G5_THEME_IMG_URL?>/box02.png" alt="icon">
             <h3 class="mb20">Food Safety</h3>
             <p class="mb30">안전한 식품이야기<br>
             동서식품의 안전센터</p>
@@ -194,6 +205,9 @@ include_once(G5_THEME_PATH.'/head.php');
         </li>
     </ul>
 </div> <!-- section3 -->
+
+
+
 
 <?php
 include_once(G5_THEME_PATH.'/tail.php');

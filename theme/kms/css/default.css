@@ -82,7 +82,7 @@ border:1px solid #558ab7 !important;
 #hd_wrapper {position:relative;margin:0 auto;_height:140px;zoom:1}
 #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
-#logo {float:left;padding:10px 0 0}
+#logo {float:left;padding:5px 0 0}
 #logo img{width: 145px; height: 45px;}
 .hd_sch_wr {float:left;padding:30px 0;width:445px;margin-left:65px}
 #hd_sch h3 {position:absolute;font-size:0;line-height:0;overflow:hidden}
@@ -164,16 +164,23 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #wrapper {}
 #container_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #container_wr {margin:0 auto;height:100%;zoom:1}
-#aside {float:left; width:235px;padding:0;height:100%;} /*margin:20px 0 20px 20px*/
+#aside {float:right; width:235px;padding:0;height:100%;} /*margin:20px 0 20px 20px*/
 
 #container {position:relative;float:right;min-height:500px;height:auto !important;height:500px;font-size:1em;width:930px;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.333em;margin:0 auto;font-weight:bold}
-#container_title span {margin:0 auto 10px;display:block;line-height:30px}
+#container_title span {margin:0 auto 10px;display:block;line-height:30px;
+                      font-size:1.2rem; text-align: center}
+#container_title span:before {content: "";
+                              display: block;
+                              width: 50px;
+                              height: 2px;
+                              background: #ffc81f;
+                              margin: 20px auto;}
 
 .lt_wr {width:32%}
 .lt_wr:nth-child(3n+1) {clear:both}
-.latest_wr {margin-bottom:20px}
+.latest_wr {margin-bottom:60px}
 .latest_wr:after {display:block;visibility:hidden;clear:both;content:""}
 .latest_top_wr {margin:0 -10px 20px}
 .latest_top_wr:after {display:block;visibility:hidden;clear:both;content:""}
@@ -184,7 +191,6 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #ft_wr {max-width:1240px;margin:0;padding:40px 0;position:relative;display:inline-block;text-align:left}
 #ft_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #ft_wr .ft_cnt {width:25%;float:left;padding:0 20px}
-
 #ft_link {text-align:left}
 #ft_link a {display:block;color:#fff;line-height:2em;font-weight:bold}
 #ft_company h2 {font-size:1.2em;margin-bottom:20px}
@@ -539,32 +545,32 @@ box-sizing:content-box;
            background: #aaa url(../img/vmain.jpg) no-repeat center fixed;
            margin-bottom: 60px;
            background-size: cover; color:#fff; padding:80px 0;}
-.containerWrap .section {width: 1240px; margin: 0 auto;}
-.containerWrap .section>h3 {text-align: center;}
-.containerWrap .section>h3:after {content:"";
+.containerWrap .section1 {width: 1240px; margin: 0 auto;}
+.containerWrap .section1>h3 {text-align: center;}
+.containerWrap .section1>h3:after {content:"";
                               display: block;
                               width: 50px; height: 2px;
                               background: #fff;
                               margin: 20px auto;}
-.containerWrap .section>p {text-align: center;
+.containerWrap .section1>p {text-align: center;
                            font-size: 2rem; margin-bottom: 80px;}
-.containerWrap .section li {float: left;
+.containerWrap .section1 li {float: left;
                         width: calc((100% - 60px) / 4);
                         border: 4px solid #FFC81F;
                         height: 380px; padding-top: 70px;
                         border-radius: 10px;
                         transition:.3s; cursor: pointer;}
-.containerWrap .section li:hover{box-shadow:5px 5px 8px rgba(0,0,0,0.5);
+.containerWrap .section1 li:hover{box-shadow:5px 5px 8px rgba(0,0,0,0.5);
                              background: #FFC81F;
                              transform:translate(-10px, -10px)}
-.containerWrap .section li + li {margin-left: 20px;}
+.containerWrap .section1 li + li {margin-left: 20px;}
 /* 두번째 있는 li 태그부터 적용 */
-.containerWrap .section li img {display: block;
+.containerWrap .section1 li img {display: block;
                             margin: 0 auto;}
-.containerWrap .section .card_body {text-align: center; padding: 20px 40px;}
-.containerWrap .section .card_body h3 {margin-bottom: 10px; font-size:1rem}
-.containerWrap .section .card_body p {margin-bottom: 10px; font-size:14px}
-.containerWrap .section .card .img2 {display: none;}
+.containerWrap .section1 .card_body {text-align: center; padding: 20px 40px;}
+.containerWrap .section1 .card_body h3 {margin-bottom: 10px; font-size:1rem}
+.containerWrap .section1 .card_body p {margin-bottom: 10px; font-size:14px}
+.containerWrap .section1 .card .img2 {display: none;}
 
 
 

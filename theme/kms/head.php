@@ -210,6 +210,11 @@ $(document).ready(function(){
 <div id="wrapper">
     <div id="container_wr" <? if(!defined('_INDEX_')) {?> style="width:1240px"<?}?>> <!-- 1200px -->
 
+      <? if(!defined('_INDEX_')) {?>
+      <div id="aside">
+        <? include_once(G5_THEME_PATH.'/skin/nav/mysubmenu.php');?>
+      </div>
+    <?}?>
 
     <div id="container" <? if(defined('_INDEX_')) {?> style="width:100%"<?}?>> <!-- 930px -->
         <?php if (!defined("_INDEX_")) { ?>

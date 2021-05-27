@@ -8,13 +8,7 @@ if (G5_IS_MOBILE) {
 ?>
 
     </div>
-    <? if(!defined('_INDEX_')) {?>
-    <div id="aside">
-      <? include_once(G5_THEME_PATH.'/skin/nav/mysubmenu.php');?>
-    </div>
-  <?}?>
 </div>
-
 </div>
 <!-- } 콘텐츠 끝 -->
 
@@ -25,7 +19,7 @@ if (G5_IS_MOBILE) {
     <div class="footerWrap">
         <div class="footerLogo">
             <a href="index.html">
-              <img src="img/logo.png" alt="">
+              <img src="<? echo G5_THEME_IMG_URL ?>/logo.png" alt="">
             </a>
         </div>
         <div class="footerTxt">
