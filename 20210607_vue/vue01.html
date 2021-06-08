@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul class="list">
+            <!-- 1) <li v-for="명작 in product">{{명작}}</li> -->
+            <li v-for="(명작,i) in product">
+                <img v-bind:src="`./images/${img[i]}`" alt="">
+                <div>{{product[i]}}<br>{{price[i].toLocaleString()}}원</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                massage:'hello',
+                product:['로드','하이브리드','유아용','기타'],
+                img:['1715.jpg','1740.jpg','1750.jpg','2224.jpg'],
+                price:[100000,10000000,100000,1000000]
+            }
+        })
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        img {width: 100%;}
+
+        .list li {display: flex;}
+        .list li img {width:50%}
+        .list li div {width:50%}
+    </style>
+</body>
+</html>
