@@ -24,9 +24,9 @@
                 afterLoad:function(anchorslink,index){
                  console.log(anchorslink+ ',' +index);
                  if(index == 1){
-                   $("txt1st").addClass("end");
+                   $(".txt1st").addClass("end");
                  }else{
-                   $("txt1st").removeClass("end");
+                   $(".txt1st").removeClass("end");
                  }
                 }
             })
@@ -48,8 +48,15 @@
         #fp-nav.right{right:10px;}
         .fp-tooltip.right{right:20px}
 
-        .txt1st {opacity: 0; transition:.3s; transform:translateX(-300px);}
+        .txt1st {opacity: 0; transition:0.7s; transform:translateX(-300px);}
         .txt1st.end {opacity: 1; transform:translateX(0);}
+        .scroll{position: absolute;bottom: 30px;left:50%;transform:translateX(-50%);
+                animation-name:xScroll; animation-duration: 0.8s;
+                animation-iteration-count: infinite; animation-direction: alternate;}
+        @keyframes xScroll {
+          from{bottom: 30px;}
+            to{bottom: 50px;}
+        }
 
         @media screen and (max-width:1000px){
             .navbar li.active{border-bottom: 5px solid transparent;}
@@ -66,7 +73,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav topMenu ml-auto">
             <li class="nav-item"  data-menuanchor="m1st">
-              <a class="nav-link" href="#m1st">Home </a>
+              <a class="nav-link" href="#m1st">Home</a>
             </li>
             <li class="nav-item" data-menuanchor="m2st">
               <a class="nav-link" href="#m2st">product</a>
@@ -89,6 +96,9 @@
                 <p>Lorem ipsum dolor sit.</p>
                 <a href="#" class="btn btn-primary">more</a>
               </div>
+            </div>
+            <div class="scroll">
+              <a href="#m2st"><img src="images/btn_scroll.png" alt="스크롤"></a>
             </div>
         </div>
         <div class="section page2" data-anchor="m2st">2</div>
